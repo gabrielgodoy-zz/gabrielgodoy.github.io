@@ -1,0 +1,3 @@
+Arquivo somente para não deixar a pasta vazia antes do build do Gulp.
+
+NAO APAGAR

@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Gabriel Godoy
+email: hi@gabrielgodoy.com
+description: > # this means to ignore newlines until "baseurl:"
+  Sou um front-end do RJ apaixonado pela web e por novas tecnologias. Não existe nada mais dinâmico que a internet. É um desafio se manter atualizado com tantas coisas novas surgindo todos os dias, mas um desafio gratificante =). Aprender coisas novas se torna um hábito diário para mim.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://gabrielgodoy.com" # the base hostname & protocol for your site
+twitter_username: g4brielgodoy
+github_username:  gabrielgodoy
+
+# Build settings
+markdown: kramdown
+
+sass:
+  sass_dir: assets/_sass
