@@ -1,0 +1,29 @@
+{
+  "name": "gabrielgodoy.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielgodoy/gabrielgodoy.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielgodoy/gabrielgodoy.github.io/issues"
+  },
+  "homepage": "https://github.com/gabrielgodoy/gabrielgodoy.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-watch": "^4.3.5"
+  }
+}
