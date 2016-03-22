@@ -9,3 +9,13 @@ github_username:  gabrielgodoy
 
 # Build settings
 markdown: kramdown
+permalink: /:title/
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
