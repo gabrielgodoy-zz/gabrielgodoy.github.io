@@ -1,0 +1,10 @@
+.warning-box {
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d8d8d8;
+	margin-bottom: 1.11111rem;
+	padding: 1.11111rem;
+	background: #ecfaff;
+}

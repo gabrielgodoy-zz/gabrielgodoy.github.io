@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aplicativo do GNT - Corrida do Food Truck</title>
+	<link rel="icon" href="favicon.png" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/framework-game.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/html2canvas.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/facebook.js"></script>
+	<script type="text/javascript" src="js/facebook-canvas.js"></script>
+	<script type="text/javascript" src="js/mural.js"></script>
+	
+</head>
+<body onload="liberar_opcoes();">
+	<div id="fb-root"></div>
+	<div class="wrapper wrapper-mural">
+		<div class="share-mask">
+			<div class="warning-share">
+				<h2 class="title-confirmation">Sua imagem foi postada<br/> com sucesso :)</h2> 
+				<div class="share-box">
+					<h2>Compartilhe seu Food Truck</h2>
+					<input class="input-share" type="text" maxlength="250" placeholder="Digite aqui uma mensagem para acompanhar sua foto..." pattern="[a-zA-Z0-9]+">
+					<a href="#" class="bt-confirmar">Postar</a>
+					<a href="#" class="bt-cancelar">Cancelar</a>
+					<p class="legal-action">* Clicando em “Postar" você estará consentindo em postar a imagem do Food Truck no seu perfil do Facebook.</p>
+				</div>
+			</div>
+		</div>
+
+		<header class="mural-foodtruck">
+			<a href="http://gnt.globo.com/programas/food-truck-a-batalha/" target="_blank"><h1 class="main-logo"></h1></a>
+			<a><img class="intro-logo-app" src="images/logo-app.png" alt="Corrida do Food Truck" width="200"></a>
+			<a href="http://gnt.globo.com/" target="_blank"><img src="images/logo-gnt-header-ingame.png" alt=""></a>
+		</header>
+		<div class="loadingapp">
+			<div>
+				<img src="images/loading.gif" alt="Loading" />
+				<h2>Carregando a Seção</h2>
+				<h2 class="aguarde">Aguarde...</h2>
+			</div>
+		</div>
+		<section class="faixa-mural">
+
+			<h2>Personalize o seu Food Truck</h2>
+			<p>Faça um upgrade no seu Food Truck e compartilhe com seus amigos</p>
+			<div class="foodtruck-quadro">
+
+				<!-- Montagem do Truck -->
+
+				<ul class="plano">
+					<li class="estadio"><img src="images/montagem-truck/plano-estadio.jpg" alt=""></li>
+					<li class="parque"><img src="images/montagem-truck/plano-parque.jpg" alt=""></li>
+					<li class="rua"><img src="images/montagem-truck/plano-rua.jpg" alt=""></li>
+					<li class="praia"><img src="images/montagem-truck/plano_praia.jpg" alt=""></li>
+				</ul>
+
+				<ul class="cores">
+					<li class="preto"><img src="images/montagem-truck/truck-preto.png" alt=""></li>
+					<li class="azul"><img src="images/montagem-truck/truck-azul.png" alt=""></li>
+					<li class="rosa"><img src="images/montagem-truck/truck-rosa.png" alt=""></li>
+					<li class="verde"><img src="images/montagem-truck/truck-verde.png" alt=""></li>
+					<li class="amarelo"><img src="images/montagem-truck/truck-amarelo.png" alt=""></li>
+				</ul>
+
+				<ul class="design">
+					<li class="moustache"><img src="images/montagem-truck/moustache.png" alt="" /></li>
+					<li class="candy"><img src="images/montagem-truck/candy.png" alt="" /></li>
+					<li class="flores"><img src="images/montagem-truck/flores.png" alt="" /></li>
+					<li class="cilios"><img src="images/montagem-truck/cilios.png" alt="" /></li>
+					<li class="chifres"><img src="images/montagem-truck/chifres.png" alt="" /></li>
+				</ul>
+
+				<ul class="pattern">
+					<li class="organico"><img src="images/montagem-truck/pattern-organico.png" alt=""></li>
+					<li class="verao"><img src="images/montagem-truck/pattern-verao.png" alt=""></li>
+					<li class="candies"><img src="images/montagem-truck/pattern-candies.png" alt=""></li>
+					<li class="caveira"><img src="images/montagem-truck/pattern-caveira.png" alt=""></li>
+				</ul>
+
+				<ul class="tipocomida">
+					<li class="tipohotburger"><img src="images/montagem-truck/tipohotburger.png" alt=""></li>
+					<li class="tipoorganico"><img src="images/montagem-truck/tipoorganico.png" alt=""></li>
+					<li class="tipodoces"><img src="images/montagem-truck/tipodoces.png" alt=""></li>
+				</ul>
+
+				<div class="box-melhor-tempo">
+					<p>Meu Melhor Tempo</p>
+					<span>---</span>
+				</div>
+
+				<img class="logo-prog-quadro" src="images/logo-foodtruck-quadro.png" alt="">
+				<!-- abaixo entra o input do usuario -->
+				<div class="box-letteringMirror">
+					<p class="letteringMirror" >Dê um nome <br>para seu Truck</p>
+				</div>
+
+			</div>
+			<div class="boxes-custom boxes-vert">
+				<div class="box-custom box-lettering cf">
+					<div class="tag-box-custom">Dê nome ao seu truck</div>
+					<input class="lettering" type="text" maxlength="12" placeholder="Escrever na primeira linha..."  pattern='[a-zA-Z0-9]+'>
+					<p class="countdown">90</p>
+					<input class="lettering2" type="text" maxlength="12" placeholder="Escrever na segunda linha..."  pattern='[a-zA-Z0-9]+'>
+					<p class="countdown2">90</p>
+				</div>
+				<div class="box-custom">
+					<!-- <div id="cores-custom" class="lockeditens">
+						<p><span></span>Destrave as opções de Cores chegando abaixo do tempo <span class="timeChallenge">2:30</span></p>
+					</div> -->
+					<div class="tag-box-custom">Cores</div>
+					<ul class="cores-custom">
+						<li  class="icon-selected"><a href="#" class="bt-preto"></a></li>
+						<li ><a href="#" class="bt-azul"></a></li>
+						<li ><a href="#" class="bt-rosa"></a></li>
+						<li ><a href="#" class="bt-verde"></a></li>
+						<li ><a href="#" class="bt-amarelo"></a></li>
+					</ul>
+				</div>
+				<div class="box-custom">
+					<!-- <div id="adesivo-custom" class="lockeditens">
+						<p><span></span>Destrave as opções de Adesivos chegando abaixo do tempo <span class="timeChallenge">2:00</span></p>
+					</div> -->
+					<div class="tag-box-custom">Adesivos</div>
+					<ul class="adesivo-custom">
+						<li><a href="#" class="bt-organico"><img src="images/adesivo-organico.jpg" /></a></li>
+						<li><a href="#" class="bt-verao"><img src="images/adesivo-verao.jpg" /></a></li>
+						<li><a href="#" class="bt-candies"><img src="images/adesivo-candy.jpg" /></a></li>
+						<li><a href="#" class="bt-caveira"><img src="images/adesivo-caveira.jpg" /></a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="boxes-custom">
+				<div class="box-custom ">
+					<!-- <div id="plano-custom" class="lockeditens">
+						<p><span></span>Destrave as opções de Planos de Fundo chegando abaixo do tempo <span class="timeChallenge">1:45</span></p>
+					</div> -->
+					<div class="tag-box-custom">Planos de Fundo</div>
+					<ul class="plano-custom">
+						<li class="icon-selected"><a href="#" class="bt-rua"><img src="images/plano-street.jpg" /></a></li>
+						<li><a href="#" class="bt-praia"><img src="images/plano-praia.jpg" /></a></li>
+						<li><a href="#" class="bt-parque"><img src="images/plano-parque.jpg" /></a></li>
+						<li><a href="#" class="bt-estadio"><img src="images/plano-estadio.jpg" /></a></li>
+					</ul>
+				</div>
+				<div class="box-custom">
+					<!-- <div id="design-custom" class="lockeditens">
+						<p><span></span>Destrave as opções de Design chegando abaixo do tempo <span class="timeChallenge">1:30</span></p>
+					</div> -->
+					<div class="tag-box-custom">Design</div>
+					<ul class="design-custom">
+						<li><a href="#" class="bt-flores"><img src="images/icon-flower.png" /></a></li>
+						<li><a href="#" class="bt-cilios"><img src="images/icon-eye.png" /></a></li>
+						<li><a href="#" class="bt-candy"><img src="images/icon-candy.png" /></a></li>
+						<li><a href="#" class="bt-moustache"><img src="images/icon-moustache.png" /></a></li>
+						<li><a href="#" class="bt-chifres"><img src="images/icon-chifre.png" /></a></li>
+					</ul>
+				</div>
+
+				<div class="box-custom noright">
+					<!-- <div id="tipocomida-custom" class="lockeditens">
+						<p><span></span>Destrave as opções de Tipos de Comida chegando abaixo do tempo <span class="timeChallenge">1:20</span></p>
+					</div> -->
+					<div class="tag-box-custom">Tipos de Comida</div>
+					<ul class="tipocomida-custom">
+						<li><a href="#" class="bt-tipohotburger"><img src="images/tipo-hotdog-burger.jpg" /></a></li>
+						<li><a href="#" class="bt-tipoorganico"><img src="images/tipo-organico.jpg" /></a></li>
+						<li><a href="#" class="bt-tipodoces"><img src="images/tipo-icecreamcupcake.jpg" /></a></li>
+					</ul>
+				</div>
+
+				<div class="bts-action-mural">
+					<a href="#" class="bt-mural-share compartilhar-foto">
+						<span>Compartilhar</span> Compartilhar
+					</a>
+					<a href="index.html" class="bt-mural-voltar">
+						<span>Voltar</span> Voltar
+					</a>
+
+				</div>
+			</div>
+
+		</section>
+
+		<footer class="mural">
+
+		</footer>
+	</div>
+
+</body>
+</html>

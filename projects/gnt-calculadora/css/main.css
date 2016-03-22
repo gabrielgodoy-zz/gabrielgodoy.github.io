@@ -1,0 +1,652 @@
+/*Fonts*/
+@font-face {
+	font-family: 'a_song_for_jenniferregular';
+	src: url('../fonts/a song for jennifer-webfont.eot');
+	src: url('../fonts/a song for jennifer-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/a song for jennifer-webfont.woff2') format('woff2'),
+	url('../fonts/a song for jennifer-webfont.woff') format('woff'),
+	url('../fonts/a song for jennifer-webfont.ttf') format('truetype'),
+	url('../fonts/a song for jennifer-webfont.svg#a_song_for_jenniferregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+/* Selection Color */
+::selection {
+	background:#fec841;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#fec841;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#fec841;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*General*/
+* {
+	box-sizing: border-box;
+}
+body {
+	counter-reset: section;
+}
+p { 
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-family: 'a_song_for_jenniferregular';
+	font-weight: normal;
+	text-rendering: optimizeLegibility;
+	text-shadow: 0 0 1px transparent;
+	-webkit-font-smoothing: antialiased;
+}
+h4 {
+	font-family: 'Ubuntu', sans-serif;
+	color: #444;
+	font-size: 18px;
+	font-weight: 400;
+}
+p { 
+	font-family: 'Ubuntu', sans-serif;
+	color: #444;
+	font-size: 16px;
+	font-weight: 300;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after, .sliderCalculatorMultiplicands:before, .sliderCalculatorMultiplicands:after {
+ 	content: " "; /* 1 */
+ 	display: table; /* 2 */
+ }
+
+ .cf:after, .sliderCalculatorMultiplicands:after {
+ 	clear: both;
+ }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+ .cf, .sliderCalculatorMultiplicands {
+ 	*zoom: 1;
+ }
+ .wrapper {
+ 	margin: 0 auto;
+ 	width: 810px;
+ 	border: 1px solid #eee;
+ }
+ header {
+ 	background: url('../images/icons-bg.png') left top no-repeat;
+ 	overflow: hidden;
+ 	position: relative;
+ }
+ header > img.logo {
+ 	float: right;
+ }
+ header h2 {
+ 	font-size: 65px;
+ 	text-transform: uppercase;
+ }
+ .title-header {
+ 	float: left;
+ 	margin: 22px 0 0 174px;
+ }
+ .title-header h2 {
+ 	color: #fec841;
+ 	line-height: 50px;
+ }
+ .title-header p {
+ 	font-size: 18px;
+ 	font-weight: 400;
+ }
+ .faixa-header {
+ 	clear: both;
+ 	background: url('../images/faixa-header.png') no-repeat;
+ 	min-height: 141px;
+ 	position: relative;
+ 	top: -31px;
+ }
+ .faixa-header p {
+ 	clear: both;
+ 	width: 300px;
+ 	text-align: center;
+ 	margin: 0px 0 0 114px;
+ 	line-height: 23px;
+ 	padding-top: 34px;
+ }
+ section.escolha-convidados {
+ 	border-top: 1px solid #dbdfe0;
+ 	border-bottom: 1px solid #dbdfe0;
+ 	background: #f7f7f5;
+ 	padding: 0 45px;
+ 	overflow: hidden;
+ 	margin-bottom: 20px;
+ }
+ .title-section:before {
+ 	border-radius: 50%;
+ 	background-color: #fec841;
+ 	counter-increment: section;
+ 	content: counter(section);
+ 	color: #fff;
+ 	display: block;
+ 	float: left;
+ 	margin: -2px 10px 0 0;
+ 	font-size: 18px;
+ 	height: 24px;
+ 	text-align: center;
+ 	padding-top: 3px;
+ 	width: 27px;
+ }
+
+ /*Slider Bars*/
+ .sliderCalculator {font:12px Arial, sans-serif; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; user-select:none;}
+ .sliderCalculator .icon {background-repeat:no-repeat; margin:0 auto; position:relative;}
+ .sliderCalculatorBar {
+ 	background-color: #A4A4A4;
+ 	-moz-box-shadow:    inset 0 0 10px #777;
+ 	-webkit-box-shadow: inset 0 0 10px #777;
+ 	box-shadow:         inset 0 0 10px #777;
+ 	border: 1px solid;
+ 	border-color: #bebebe;
+ 	margin: 56.5px 0 0 28px;
+ 	border-radius: 9px;
+ }
+ .sliderCalculatorBarDisplay {
+ 	background: url(../images/arrow-bubble.png) no-repeat 50% 26px;
+ 	color:#fff; 
+ 	font-family: Ubuntu;
+ 	position:absolute; 
+ 	bottom:100%; 
+ 	right: -52px;
+ 	top: -50px;
+ 	z-index:2;
+ }
+ .sliderCalculatorBarDisplayText {
+ 	background:#2bbab6; 
+ 	margin-bottom:6px; 
+ 	padding:5px 8px; 
+ 	white-space:nowrap;
+ 	min-width: 111px;
+ 	text-align: center;
+ 	cursor: pointer;
+
+ 	-webkit-touch-callout: none;
+ 	-webkit-user-select: none;
+ 	-khtml-user-select: none;
+ 	-moz-user-select: none;
+ 	-ms-user-select: none;
+ 	user-select: none;
+ }
+ .sliderCalculatorBarDisplayCount {font-weight:bold;}
+ .sliderCalculatorBarLegend {color:#333; margin:20px 0 0 30px; font-family: 'Ubuntu'}
+ .sliderCalculatorBarLegend .max {float:right;}
+ .sliderCalculatorRange {
+ 	background-color: #A4A4A4;
+ 	background-image: -moz-linear-gradient(bottom, rgba(231, 231, 231, 0.88) 0%, rgba(251, 251, 251, 0.88) 99%, rgba(251, 251, 251, 0.88) 100%);
+ 	background-image: -o-linear-gradient(bottom, rgba(231, 231, 231, 0.88) 0%, rgba(251, 251, 251, 0.88) 99%, rgba(251, 251, 251, 0.88) 100%);
+ 	background-image: -webkit-linear-gradient(bottom, rgba(231, 231, 231, 0.88) 0%, rgba(251, 251, 251, 0.88) 99%, rgba(251, 251, 251, 0.88) 100%);
+ 	background-image: linear-gradient(to top, rgba(231, 231, 231, 0.88) 0%, rgba(251, 251, 251, 0.88) 99%, rgba(251, 251, 251, 0.88) 100%);
+ 	-moz-box-shadow: inset 0 1px 0 #FFF;
+ 	-webkit-box-shadow: inset 0 1px 0 #FFF;
+ 	position:relative; 
+ 	width:0; 
+ 	height:15px; 
+ 	border-radius:9px;
+ }
+ .sliderCalculatorDisplay {border-radius:50%; color:#fff; display:inline-block; font-weight:bold; position:relative; text-align:center; z-index:1;}
+ .sliderCalculatorDisplay sup {position:relative; vertical-align:baseline; top:-5px;}
+ .sliderCalculatorButton {
+ 	line-height: 33px;
+ 	font-size: 21px;
+ 	font-family: "a_song_for_jenniferregular";
+ 	text-align: center;
+ 	display: block;
+ 	width: 109px;
+ 	height: 34px;
+ 	background-color: #FFF;
+ 	background-image: -moz-linear-gradient(bottom, #EAEAEA 0%, #EAEAEA 49%, #FFF 50%, #FFF 100%);
+ 	background-image: -o-linear-gradient(bottom, #EAEAEA 0%, #EAEAEA 49%, #FFF 50%, #FFF 100%);
+ 	background-image: -webkit-linear-gradient(bottom, #EAEAEA 0%, #EAEAEA 49%, #FFF 50%, #FFF 100%);
+ 	background-image: linear-gradient(to top, #EAEAEA 0%, #EAEAEA 49%, #FFF 50%, #FFF 100%);
+ 	-moz-border-radius: 5px;
+ 	-webkit-border-radius: 5px;
+ 	border-radius: 5px;
+ 	-moz-box-shadow: 2.5px 4.3px 0 rgba(0, 0, 0, 0.13);
+ 	-webkit-box-shadow: 2.5px 4.3px 0 rgba(0, 0, 0, 0.13);
+ 	box-shadow: 2.5px 4.3px 0 rgba(0, 0, 0, 0.13);
+ }
+ .sliderCalculatorButton:active {box-shadow:inset 0 1px 3px rgba(0, 0, 0, .5);}
+ .sliderCalculatorMultipliers {border:1px solid #e6e6e6; border-bottom:2px solid #ccc; height:260px; margin-bottom:45px;}
+ .sliderCalculatorMultiplier {float:left; height:130px; padding:0 3% 0 2%; width:45%; margin-top: 10px;}
+ .sliderCalculatorMultiplier .sliderCalculatorDisplay {float:left; margin:30px 0 0; width:70px; height:70px;}
+ .sliderCalculatorMultiplicand.maissuco{
+ 	display: none;
+ 	position: absolute;
+ 	top: 104px;
+ 	width: 100%;
+ }
+ .sliderCalculatorMultiplicand.maisrefri{
+ 	display: none;
+ 	position: absolute;
+ 	top: 0px;
+ 	width: 100%;
+ }
+ .sliderCalculatorMultiplicand.maissalgadinhofrito{
+ 	display: none;
+ 	position: absolute;
+ 	top: 0px;
+ 	width: 100%;
+ }
+ .sliderCalculatorMultiplicand.maissalgadinhoassado{
+ 	display: none;
+ 	position: absolute;
+ 	top: 52px;
+ 	width: 100%;
+ }
+ .sliderCalculatorMultiplicands {
+ 	width:100%;
+ 	position: relative;
+ 	top: -16px;
+ }
+ .sliderCalculatorMultiplicand {
+ 	padding: 12px 5px 0 5px;
+ 	margin: 10px 0;
+ 	cursor: pointer;
+ 	min-height: 42px;
+ 	position: relative;
+ 	-moz-transition: all 0.4s ease;
+ 	-o-transition: all 0.4s ease;
+ 	-webkit-transition: all 0.4s ease;
+ 	transition: all 0.4s ease;
+ 	border-radius: 4px;
+ 	clear: both;
+ }
+ .sliderCalculatorMultiplicand:hover {
+ 	background: #eee;
+ }
+
+ .sliderCalculatorMultiplicand h4 {
+ 	margin:0; 
+ 	font-family: Ubuntu; text-transform: normal; 
+ 	font-size: 13px;
+ 	padding-left: 76px;
+ 	padding-bottom: 5px;
+ }
+ .sliderCalculatorMultiplicand h4 em {
+ 	margin-top: 4px;
+ 	font-size: 10px; 
+ 	color:#444; 
+ 	display:block; 
+ 	font-style:normal; 
+ 	font-weight:normal;
+ }
+ .sliderCalculatorMultiplicand .sliderCalculatorDisplay {
+ 	float: left;
+ 	min-width: 64px;
+ 	background-color: #2bbab6;
+ 	border-radius: 4px;
+ 	margin: -3px 12px 0 0px;
+ 	padding-top: 3px;
+ }
+
+
+ /* Display OFF */
+ .sliderCalculatorMultiplicand .sliderCalculatorDisplayOff span {
+ 	font-size: 13px;
+ 	line-height: 22px;
+ }
+ .sliderCalculatorDisplayOff {border-radius:50%; color:#fff; display:inline-block; font-weight:bold; position:relative; text-align:center; z-index:1;}
+ .sliderCalculatorMultiplicand .sliderCalculatorDisplayOff {
+ 	float: left;
+ 	min-width: 64px;
+ 	background: #eee;
+ 	border-radius: 4px;
+ 	margin: -3px 12px 0 0px;
+ 	padding-top: 3px;
+ 	top: 13px;
+ 	left: 5px;
+ 	z-index: 2;
+ 	position: absolute;
+ }
+ .sliderCalculatorMultiplicand .sliderCalculatorDisplay span {
+ 	font-size: 13px;
+ 	line-height: 22px;
+ }
+ .sliderCalculatorHandle {
+ 	cursor: col-resize;
+ }
+
+ /* Item OFF */
+ .sliderCalculatorMultiplicand.itemoff .sliderCalculatorDisplay {
+ 	background: #eee;
+ }
+ .sliderCalculatorMultiplicand.itemoff h4, .sliderCalculatorMultiplicand.itemoff h4 em{
+ 	color: #d5d5d5;
+ }
+ /*Adultos*/
+ .sliderCalculatorMultiplier.adultos .sliderCalculatorHandle {
+ 	background: url(../images/adulto-handle.png) no-repeat; 
+ 	position:absolute; 
+ 	top:-12px; 
+ 	right:-10px; 
+ 	width:26px; 
+ 	height:36px;
+ }
+
+ /*Crianças*/
+ .sliderCalculatorMultiplier.criancas .sliderCalculatorHandle {
+ 	background: url(../images/crianca-handle.png) no-repeat; 
+ 	position:absolute; 
+ 	top:-5px; 
+ 	right:-10px; 
+ 	width:26px; 
+ 	height:26px;
+ }
+
+ .separator {
+ 	display: block;
+ 	float: left;
+ 	height: 120px;
+ 	margin: 0 27px 0 42px;
+ 	border-left: 1px solid #dbdfe0;
+ 	border-right: 1px solid #fff;
+ }
+
+ /*Cardapio*/
+ .title-menu {
+ 	background: url(../images/bullet-menu.png) repeat-x center center;
+ 	width: 79%;
+ 	margin: 0 auto;
+
+ }
+ .cardapio h2 {
+ 	background: #fff;
+ 	text-align: center;
+ 	color: #444;
+ 	font-size: 44px;
+ 	margin: 0 auto;
+ 	width: 120px;
+ }
+ .cardapio ul {
+ 	list-style: none;
+ }
+ .cardapio {
+ 	padding: 0 45px;
+ 	margin-bottom: 30px;
+ 	overflow: hidden;
+ }
+ .cardapio h3 {
+ 	color: #fec841;
+ 	font-size: 28px;
+ }
+
+ /* Icones dos Menus */
+
+ .classe-menu h3:before {
+ 	float: left;
+ 	margin: -17px 10px 0 0;
+ }
+ .classe-menu > h3 {
+ 	margin: 10px 0 20px;
+ }
+ h3.salgados:before {
+ 	content: url(../images/icon-salgados.png) ;
+ }
+ h3.doces:before {
+ 	content: url(../images/icon-doces.png) ;
+ }
+ h3.bebidas:before {
+ 	content: url(../images/icon-bebidas.png) ;
+ }
+ h3.brindes {
+ 	margin-top: 10px;
+ }
+ h3.brindes:before {
+ 	content: url(../images/icon-brindes.png) ;
+ }
+
+ .cardapio h4.title-section { 
+ 	padding: 0 0 0 155px;
+ }
+ .bts-action a img {
+ 	margin-bottom: -5px;
+ }
+ .classe-menu {
+ 	float: left;
+ 	width: 33%;
+ 	padding: 0 5.5% 0 0%;
+ 	position: relative;
+ }
+ /* Faixa Share and Print */
+ .share-and-print {
+ 	background: #2bbab6;
+ 	clear: both;
+ 	overflow: hidden;
+ 	min-height: 90px;
+ 	padding: 22px 45px 0;
+ 	position: relative;
+ }
+ .share-and-print h4.title-section {
+ 	color: #fff;
+ 	font-size: 16px;
+ 	float: left;
+ 	margin: 14px 22px 0 0;
+ }
+ .share-and-print .bts-action {
+ 	float:left;
+ }
+ .sliderCalculatorMultiplicant.print {
+ 	clear: both;
+ 	float: left;
+ 	margin-right: 34px;
+ 	margin-top: 6px;
+ 	cursor: pointer;
+
+ }
+ .share-and-print a {
+ 	-moz-transition: all 0.4s ease;
+ 	-o-transition: all 0.4s ease;
+ 	-webkit-transition: all 0.4s ease;
+ 	transition: all 0.4s ease;
+ 	color: #444;
+ 	overflow: hidden;
+
+ }
+ .share-and-print a:hover {
+ 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+ 	filter: alpha(opacity=70);
+ 	opacity: 0.7;
+ }
+ .logo-gnt {
+ 	position: absolute;
+ 	right: 22px;
+ 	top: 28px;
+ }
+ /* Faixa Instagram */
+ .faixa-instagram {
+ 	background: #249f9b;
+ 	float: left;
+ 	overflow: hidden;
+ 	padding: 20px 0;
+ 	width: 100%;
+ }
+ .faixa-instagram p {
+ 	color: #fff;
+ 	font-size: 15px;
+ }
+ .faixa-instagram h3 {
+ 	color: #fec841;
+ 	font-size: 39px;
+ }
+
+ .box-instagram {
+ 	border-radius: 0 10px 10px 0px;
+ 	float: left;
+ 	padding: 20px 0;
+ 	background: #28aeaa;
+ 	width: 450px;
+ }
+
+ .box-instagram img {
+ 	float: left;
+ 	margin: 5px 20px 0 45px;
+ }
+
+ .box-dicasdecor {
+ 	float: right;
+ 	width: 259px;
+ 	margin: 17px 48px 0 0;
+ 	text-align: center;
+ 	line-height: 22px;
+ }
+ .box-dicasdecor a {
+ 	color: #fec841;
+ 	text-decoration: none;
+ }
+
+ .vert-dots {
+ 	display: block;
+ 	background: url(../images/vert-dots.png) repeat-y center 13px;
+ 	width: 35px;
+ 	height: 100%;
+ 	position: absolute;
+ 	right: 0;
+ 	top: 45px;
+ }
+
+ .for-print {
+ 	display: none;
+ }
+
+ .item-close {
+ 	display: none;
+ 	width: 18px;
+ 	height: 18px;
+ 	background-color: #FFF;
+ 	background-image: -moz-linear-gradient(bottom, #DCDCDC 0%, #FFF 100%);
+ 	background-image: -o-linear-gradient(bottom, #DCDCDC 0%, #FFF 100%);
+ 	background-image: -webkit-linear-gradient(bottom, #DCDCDC 0%, #FFF 100%);
+ 	background-image: linear-gradient(to top, #DCDCDC 0%, #FFF 100%);
+ 	-moz-border-radius: 50%;
+ 	-webkit-border-radius: 50%;
+ 	border-radius: 50%;
+ 	border: 1px solid #c4c4c4;
+ 	position: absolute;
+ 	right: -5px;
+ 	top: -5px;
+ }
+
+ .item-close:before {
+ 	content:"X";
+ 	color: #930C1E;
+ 	position: absolute;
+ 	font-size: 11.5px;
+ 	top: 9px;
+ 	left: 4px;
+ 	padding: 0;
+ 	line-height: 0;
+ }
+
+ /* Estilo de impressao */
+
+ @media print {
+ 	.title-section.for-print {
+ 		display: block;
+ 	}
+ 	.for-print {
+ 		display: block;
+ 		font-family: Verdana;
+ 	}
+ 	header {
+ 		display: none;
+ 	}
+ 	.escolha-convidados .title-section, .sliderCalculatorBarLegend, .sliderCalculatorHandle, .separator, .share-and-print, .faixa-instagram, h3.brindes, h3.bebidas, h3.doces, h3.salgados {
+ 		display: none;
+ 	}
+ 	.sliderCalculatorMultiplier {
+ 		float: none;
+ 		position: relative;
+ 		height: auto;
+ 	}
+ 	.sliderCalculatorBar {
+ 		height: 0;
+ 		border: none;
+ 	}
+ 	.cardapio .title-section {
+ 		display: none;
+ 	}
+ 	.itemoff, .sliderCalculatorMultiplicand.maissalgadinhofrito.itemoff, .sliderCalculatorMultiplicand.maissalgadinhoassado.itemoff, .sliderCalculatorMultiplicand.salgadinhoassado.itemoff {
+ 		display: none !important;
+ 	}
+ 	.sliderCalculatorMultiplicand.maissalgadinhofrito.itemoff, .sliderCalculatorMultiplicand.maissalgadinhoassado.itemoff {
+ 		visibility: hidden !important;
+ 	}
+ 	.sliderCalculatorMultiplicand.maissuco, .sliderCalculatorMultiplicand.maissalgadinhoassado, .sliderCalculatorMultiplicand.maissalgadinhofrito {
+ 		position: static !important;
+
+ 	}
+ 	.sliderCalculatorMultiplier.adultos{
+ 		margin-top: 70px;
+ 	}
+ 	.sliderCalculatorBar {
+ 		margin-top: 40px;
+ 	}
+ 	.sliderCalculatorMultiplicand h4 {
+ 		padding-left: 0;
+ 	}
+ 	.sliderCalculatorMultiplicand .sliderCalculatorDisplay {
+ 		min-width: 0;
+ 	}
+ 	.sliderCalculatorMultiplicand .sliderCalculatorDisplay span, .sliderCalculatorBarDisplayText {
+ 		color: #000;
+ 	}
+ 	.title-menu h2 {
+ 		display: none;
+ 	}
+ 	.wrapper > h2 {
+ 		margin: 10px 45px;
+ 	}
+ 	.sliderCalculatorBarDisplayText {
+ 		text-align: left;
+ 		margin-left: 40px;
+ 		position: relative;
+ 		left: 10px;
+ 	}
+ 	.sliderCalculatorRange {
+ 		width: 1px !important;
+ 	}
+ 	.faixa-txt-print {
+ 		margin-top: 25px;
+ 		clear: both;
+ 	}
+ 	.gnt-black {
+ 		float: left;
+ 		margin: 25px 25px 0 48px;
+ 	}
+ 	.p-for-print {
+ 		display: block;
+ 		padding: 10px 20px;
+ 		margin: 10px 160px 10px 20px;
+ 		float: right;
+ 		width: 60%;
+ 	}
+ 	.sliderCalculatorMultiplicand .sliderCalculatorDisplay {
+ 		margin-top: -5px;
+ 	}
+ }

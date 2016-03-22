@@ -1,0 +1,422 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="App GNT para promover programa Animal Quiz">
+    <meta name="viewport" content="user-scalable = yes">
+
+    <meta property="og:title" content="Animal | Novo programa do GNT" />
+    <meta property="og:url" content="http://www.apps.blogfarm.com.br/gnt-animal-app-quiz/" />
+    <meta property="og:description" content="Aplicativo Animal GNT | Descubra qual animal tem mais a ver com você!" />
+    <meta property="og:image" content="http://www.apps.blogfarm.com.br/gnt-animal-app-quiz/dist/img/shareanimal.jpg" />
+    <link rel="icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="dist/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="dist/css/ie.css">
+    <![endif]-->
+    <!-- Mudar para "min" o dir quando finalizar -->
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,700"> -->
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css">
+    <script src="dist/js/main.js"></script>
+
+    <title>GNT | Animal Quiz</title>
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.Canvas.setSize();
+        }
+        // Do things that will sometimes call sizeChangeCallback()
+        function sizeChangeCallback() {
+            FB.Canvas.setSize();
+        }
+    </script><!--formatted-->
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=882182368461902&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <a id="topo"></a>
+    <div class="container">
+        <header class="topo">
+            <h1 class="logo">Animal no GNT</h1>
+            <p>Na série de suspense do GNT, 'Animal', Dr. Gil (Edson Celulari) sofre de uma doença rara que faz com que ele pense como um puma.</p>
+            <h3>Nesse clima de mistério, a gente quer saber:</h3>
+        </header>
+        <section id="app-title">
+            <img src="dist/img/header-inicio.jpg" alt="Se você fosse um animal, qual seria?" title="Responda as perguntas e veja qual animal tem mais a ver com você!">
+        </section>
+        <section id="quiz">
+            <div class="container-perguntas">
+                <div class="tampao"></div>
+                <div class="pergunta-1">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Qual musica tem mais <br>a ver com voce?
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-1.png" alt="CD">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/1-a.jpg" alt="Roar, Katy Perry">
+                                <p>Roar,<br> Katy Perry</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/1-b.jpg" alt="Freedom, George Michael">
+                                <p>Freedom,<br> George Michael</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/1-c.jpg" alt="You’ve got a friend, James Taylor">
+                                <p>You’ve got a friend,<br> James Taylor</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/1-d.jpg" alt="Somewhere Beyond The Sea, Frank Sinatra">
+                                <p>Somewhere Beyond The Sea,<br> Frank Sinatra</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-2">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Seu brinquedo de <br>infancia era :
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-2.png" alt="Dado">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/2-a.jpg" alt="Xadrez">
+                                <p>Xadrez</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/2-b.jpg" alt="Trepa-trepa">
+                                <p>Trepa-trepa</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/2-c.jpg" alt="Bambolê">
+                                <p>Bambolê</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/2-d.jpg" alt="Bola">
+                                <p>Bola</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-3">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Qual e o seu <br>rapper preferido?
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-3.png" alt="CD">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/3-a.jpg" alt="Snoop Dogg">
+                                <p>Snoop Dogg</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/3-b.jpg" alt="Eminem">
+                                <p>Eminem</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/3-c.jpg" alt="Kanye West">
+                                <p>Kanye West</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/3-d.jpg" alt="Jay-Z">
+                                <p>Jay-Z</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-4">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Quem representa seu <br>modelo de mulher ideal?
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-4.png" alt="Boca">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/4-a.jpg" alt="Taylor Swift">
+                                <p>Taylor Swift</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/4-b.jpg" alt="Beyoncé">
+                                <p>Beyoncé</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/4-c.jpg" alt="Michelle Obama">
+                                <p>Michelle Obama</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/4-d.jpg" alt="Bruna Marquezine">
+                                <p>Bruna Marquezine</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-5">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Qual e a profissão <br>ideal para voce?
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-5.png" alt="Maleta">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/5-a.jpg" alt="Empresário">
+                                <p>Empresário</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/5-b.jpg" alt="Advogado">
+                                <p>Advogado</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/5-c.jpg" alt="Médico">
+                                <p>Médico</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/5-d.jpg" alt="Chef">
+                                <p>Chef</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-6">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Qual desses filmes melhor <br>define a sua personalidade?
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-6.png" alt="Filme">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/6-a.jpg" alt=""Duro de Matar"">
+                                <p>"Duro de Matar"</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/6-b.jpg" alt=""O Poderoso Chefão"">
+                                <p>"O Poderoso Chefão"</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/6-c.jpg" alt=""Marley e Eu"">
+                                <p>"Marley e Eu"</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/6-d.jpg" alt=""Esqueceram de Mim"">
+                                <p>"Esqueceram de Mim"</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-7">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Seu ideal de malhação e?
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-7.png" alt="Coração">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/7-a.jpg" alt="Musculação">
+                                <p>Musculação</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/7-b.jpg" alt="Esportes Radicais">
+                                <p>Esportes Radicais</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/7-c.jpg" alt="Futebol">
+                                <p>Futebol</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/7-d.jpg" alt="Stand Up Paddle">
+                                <p>Stand Up Paddle</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="pergunta-8">
+                    <div class="header-pergunta">
+                        <h2 class="title-pergunta">
+                            Sua materia favorita <br>na escola era :
+                        </h2>
+                        <div class="header-icon">
+                            <img src="dist/img/icon-8.png" alt="Coração">
+                        </div>
+                    </div>
+                    <ul class="opcoes-resposta">
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/8-a.jpg" alt="História">
+                                <p>História</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/8-b.jpg" alt="Matemática">
+                                <p>Matemática</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/8-c.jpg" alt="Educação Física">
+                                <p>Educação Física</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="dist/img/respostas/8-d.jpg" alt="Artes">
+                                <p>Artes</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>   <!-- Final da Pergunta -->
+                <div class="resultado-final">
+                    <div class="termine-de-preencher">
+                        <img src="dist/img/icon-resultado-termine.png" alt="" class="icon-resultado">
+                        <p>Termine de responder as perguntas e descubra qual animal tem mais a ver com você</p>
+                    </div>
+                    <div class="resultado-puma">
+                        <img src="dist/img/icon-resultado-puma.jpg" alt="" class="icon-resultado">
+                        <div class="resultado-mensagem">
+                            <h3 class="title-puma">Voce e um puma!</h3>
+                            <p>Seus instintos aguçados ajudam você a lidar com as situações mais difíceis. Com um sexto sentido invejável, consegue identificar situações arriscadas e escapar do perigo. Seus amigos tentam acompanhar seu ritmo, mas não é fácil! Sua agilidade surpreende a todos.</p>
+                            <div class="compartilhe">
+                                <p>compartilhe</p>
+                                <a href="#" class="facebook"></a>
+                                <a href="#" class="twitter"></a>
+                            </div>
+                            <a href="#topo" class="refazer">refazer</a>
+                        </div>
+                    </div>
+                    <div class="resultado-aguia">
+                        <img src="dist/img/icon-resultado-aguia.jpg" alt="" class="icon-resultado">
+                        <div class="resultado-mensagem">
+                            <h3 class="title-aguia">Voce e uma aguia!</h3>
+                            <p>Liberdade e independência são suas palavras de ordem. Inteligente, é capaz de calcular seus “voos” sem a ajuda de ninguém. Aparece quando quer e vai embora quando tem vontade. Ninguém te segura!</p>
+                            <div class="compartilhe">
+                                <p>compartilhe</p>
+                                <a href="#" class="facebook"></a>
+                                <a href="#" class="twitter"></a>
+                            </div>
+                            <a href="#topo" class="refazer">refazer</a>
+                        </div>
+                    </div>
+                    <div class="resultado-golfinho">
+                        <img src="dist/img/icon-resultado-golfinho.jpg" alt="" class="icon-resultado">
+                        <div class="resultado-mensagem">
+                            <h3 class="title-golfinho">Voce e um golfinho!</h3>
+                            <p>Criativo, brincalhão e romântico são qualidades que têm tudo a ver com sua personalidade. Você adora se divertir e não leva muito a sério a opinião dos outros quando dizem que precisa parecer mais agressivo. É por isso que seus amigos te adoram do jeitinho que você é.</p>
+                            <div class="compartilhe">
+                                <p>compartilhe</p>
+                                <a href="#" class="facebook"></a>
+                                <a href="#" class="twitter"></a>
+                            </div>
+                            <a href="#" class="refazer">refazer</a>
+                        </div>
+                    </div>
+                    <div class="resultado-cachorro">
+                        <img src="dist/img/icon-resultado-cachorro.jpg" alt="" class="icon-resultado">
+                        <div class="resultado-mensagem">
+                            <h3 class="title-cachorro">Voce e um cachorro!</h3>
+                            <p>Carinhoso e amigável, você adora abrir a casa para os amigos e curte qualquer tipo de atividade coletiva. Está sempre por perto para ajudar a quem precisa e faz questão de demonstrar amizade até nas horas mais difíceis. Afinal, quem é que não gosta de um afago?</p>
+                            <div class="compartilhe">
+                                <p>compartilhe</p>
+                                <a href="#" class="facebook"></a>
+                                <a href="#" class="twitter"></a>
+                            </div>
+                            <a href="#topo" class="refazer">refazer</a>
+                        </div>
+                    </div>
+                    <div class="resultado-empate">
+                        <div class="resultado-mensagem">
+                            <h3 class="title-empate">Deu Empate!</h3>
+                            <a href="#" class="refazer">refazer</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

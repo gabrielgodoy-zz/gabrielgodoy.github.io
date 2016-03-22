@@ -1,0 +1,15 @@
+.ie9 .bt-zoom, .ie8 .bt-zoom, .ie9 .icon-zoom, .ie8 .icon-zoom, .ie9 #left_scroll, .ie9 #right_scroll, .ie8 #left_scroll, .ie8 #right_scroll {
+	background: url(img/transparent.png) repeat scroll 0 0 transparent;
+}
+.ie9 #carousel_ul li > img:first-child, .ie8 #carousel_ul li > img:first-child {
+	margin-bottom: -4px;
+}
+
+
+.ie8 * {
+	font-family: imprimaregular;
+}
+
+.ie8 .zoomPopup {
+	background: url(../img/black-60.png);
+}

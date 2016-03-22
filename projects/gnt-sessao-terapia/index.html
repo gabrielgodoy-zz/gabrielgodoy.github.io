@@ -1,0 +1,266 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GNT - Sessão de Terapia</title>
+    <meta name="description" content="">
+
+    <link rel="icon" href="http://g.glbimg.com/og/gs/gsat5/static_files/imagens/favicon/gnt/favicon.png" />
+    <link href='http://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ie.css">
+
+    <script src="js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <link type="text/css" rel="stylesheet" href="/fyi/styles/ie8.css" />
+        <![endif]-->
+    </head>
+    <body>
+
+            <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="app-container">
+                <div class="loadingapp">
+                    <div>
+                        <img src="img/loading.gif" alt="Loading" />
+                        <h2>Carregando o Aplicativo</h2>
+                        <h2 class="aguarde">Aguarde...</h2>
+                    </div>
+                </div>
+                <header>
+                    <h1 class="main-logo">Sessão de Terapia</h1>
+                    <p>Visite o consultório do <br><span>Theo</span></p>
+                    <img src="img/theo.png" alt="Theo" title="Theo">
+                    <span class="linha-fade"></span>
+                </header>
+                <section id='carousel_container'>
+                    <div class="slide-inicio">
+                        <div class="lightbox-inicio">
+                            <h2>Seja bem-vindo ao consultório do Theo.</h2>
+                            <p>Aqui você vai poder relembrar momentos que marcaram as três temporadas e a relação especial do Theo com seus pacientes.</p>
+                            <a href="" class="bt-iniciar">Iniciar</a>
+                        </div>
+                    </div>
+                    <div class="slide-tutorial"><a href="#" class="close-tutorial" style="display: inline;"></a></div>
+
+                    <div class="scroll finish" id='left_scroll'></div>
+                    <div id='carousel_inner'>
+                        <!-- Carrossel mostrando o consultorio -->
+                        <ul id='carousel_ul'>
+                            <li>
+                                <!-- Área clicável para dar zoom na janela-->
+                                <a href="#" class="bt-zoom" id="btjanela"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoverjanela.png" alt="" class="hoverobject hoverjanela">
+
+                                <!-- Área clicável para dar zoom na janela-->
+                                <a href="#" class="bt-zoom" id="btestante"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoverestante.png" alt="" class="hoverobject hoverestante">
+
+                                <img src='img/1.jpg' />
+                            </li>
+                            <li>
+                                <!-- Área clicável para dar zoom no sofá -->
+                                <a href="#" class="bt-zoom" id="btsofa"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoversofa.png" alt="" class="hoverobject hoversofa">
+                                <img src='img/2.jpg' />
+                            </li>
+                            <li>
+                                <img src='img/3.jpg' />
+                                <!-- Área clicável para dar zoom no lenço sobre a mesa -->
+                                <a href="#" class="bt-zoom" id="btlenco"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoverlenco.png" alt="" class="hoverobject hoverlenco">
+                                <!-- Área clicável para dar zoom na cozinha -->
+                                <a href="#" class="bt-zoom" id="btcozinha"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hovergeladeira.png" alt="" class="hoverobject hovergeladeira">
+                                <!-- Área clicável para dar zoom no barco -->
+                                <a href="#" class="bt-zoom" id="btbarco"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoverbarco.png" alt="" class="hoverobject hoverbarco">
+                                <!-- Área clicável para dar zoom no cafe -->
+                                <a href="#" class="bt-zoom" id="btcafe"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hovercafe.png" alt="" class="hoverobject hovercafe">
+                                <!-- Área clicável para dar zoom na mesa -->
+                                <a href="#" class="bt-zoom" id="btmesa"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hovermesa.png" alt="" class="hoverobject hovermesa">
+                            </li>
+                            <li>
+                                <img src='img/4.jpg' />
+                                <!-- Área clicável para dar zoom na poltrona -->
+                                <a href="#" class="bt-zoom" id="btpoltrona"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoverpoltrona.png" alt="" class="hoverobject hoverpoltrona">
+                            </li>
+                            <li>
+                                <img src='img/5.jpg' />
+                                <!-- Área clicável para dar zoom na porta de entrada -->
+                                <a href="#" class="bt-zoom" id="btporta"><span class="veja-mais-bt"></span></a>
+                                <img src="img/hoverporta.png" alt="" class="hoverobject hoverporta">
+
+                                <a href="#" class="icon-sound play"></a>
+                                <a href="#" class="icon-sound stop"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Div com cena ampliada da cozinha -->
+                    <div id="zoomcozinha" class="container-zoom ">
+                        <a href="#" class="icon-zoom" id="iconCafeteira"></a>
+                        <img src="img/hover2cafeteira.png" alt="" class="hoverobject hover2cafeteira">
+                        <a href="#" class="icon-zoom" id="iconGeladeira"></a>
+                        <img src="img/hover2geladeira.png" alt="" class="hoverobject hover2geladeira">
+                        <img src="img/zoomcozinha.jpg" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popup2 popupGeladeira">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/gafWAGOqb4o?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Na 2ª temporada, o Dani comoveu todo mundo ao tentar agradar os pais. A cena do Theo preparando o sanduiche para ele marcou a ligação entre os dois. Reveja o episódio no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/2909276/" target="_blank" >http://globosatplay.globo.com/gnt/v/2909276/</a></p>
+                        </div>
+                        <div class="mask"></div> 
+                    </div>
+
+                    <!-- Div com cena ampliada do cafe -->
+                    <div id="zoomcafe" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconCafe"></a>
+                        <img src="img/hover2cafe.png" alt="" class="hoverobject hover2cafe">
+                        <img src="img/zoomcafe.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupCafe">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/--_jKwXGN5g?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Quem não lembra da clássica cena em que Breno leva uma máquina de café de presente para o Theo na 1ª tmeporada? Assista à íntegra no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/2184747/" target="_blank" >http://globosatplay.globo.com/gnt/v/2184747/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+
+
+                    <!-- Div com cena ampliada do barco -->
+                    <div id="zoombarco" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconBarco"></a>
+                        <img src="img/hover2barco.png" alt="" class="hoverobject hover2barco">
+                        <img src="img/zoombarco.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupBarco">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/rJfyU2bl6Xw?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Quem lembra da cena marcante da Nina quebrando o barco do Theo na 1ª temporada? Assista ao episódio no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/2225098/" target="_blank" >http://globosatplay.globo.com/gnt/v/2225098/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <!-- Div com cena ampliada da estante -->
+                    <div id="zoomestante" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconEstante"></a>
+                        <img src="img/hover2estante.png" alt="" class="hoverobject hover2estante">
+                        <img src="img/zoomestante.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupEstante">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/jLd5W8fdcro?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Bianca chegou com tudo na primeira sessão da 3ª temporada. Assista à íntegra do episódio: <a href="http://globosatplay.globo.com/gnt/v/3510932/" target="_blank" >http://globosatplay.globo.com/gnt/v/3510932/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <!-- Div com cena ampliada da janela -->
+                    <div id="zoomjanela" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconJanela"></a>
+                        <img src="img/hover2janela.png" alt="" class="hoverobject hover2janela">
+                        <img src="img/zoomjanela.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupJanela">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/Hw-tUYW3P50?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Theo volta de viagem na 3ª temporada, mas precisa lidar com um dos seus maiores conflitos. Confira o 1º episódio no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/3510932/" target="_blank" >http://globosatplay.globo.com/gnt/v/3510932/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <!-- Div com cena ampliada do sofá -->
+                    <div id="zoomsofa" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconSofa"></a>
+                        <img src="img/hover2sofa.png" alt="" class="hoverobject hover2sofa">
+                        <img src="img/zoomsofa.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupSofa">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/ywznOsTG-KU?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Foi a sua primeira sessão do Otavio na 2ª temoprada, mas a mensagem da filha que Otavio lê para Theo mostra, desde cedo, a relação intensa e bonita que existia entre eles. Quem não se emocionou com o paciente? A íntegra do episódio você assiste aqui: <a href="http://globosatplay.globo.com/gnt/v/2842694/" target="_blank" >http://globosatplay.globo.com/gnt/v/2842694/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <!-- Div com cena ampliada do lenço sobre a mesa -->
+                    <div id="zoomlenco" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconLenco"></a>
+                        <img src="img/hover2lenco.png" alt="" class="hoverobject hover2lenco">
+                        <img src="img/zoomlenco.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupLenco">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/EGEhRb75SjQ?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Início do primeiro episódio, da primeira temporada, marcada pela declaração de Júlia a Theo. A íntegra do episódio você assiste no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/2168387/" target="_blank" >http://globosatplay.globo.com/gnt/v/2168387/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+                    <!-- Div com cena ampliada mesa -->
+                    <div id="zoommesa" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconMesa"></a>
+                        <img src="img/hover2mesa.png" alt="" class="hoverobject hover2mesa">
+                        <img src="img/zoommesa.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popup2 popupMesa">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/1XehvunTzTk?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">Para muitos, o momento em que Carol quebra a maquete foi muito marcante na 2ª temporada. Assista ao episódio no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/2842693/" target="_blank" >http://globosatplay.globo.com/gnt/v/2842693/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <!-- Div com cena ampliada poltrona -->
+                    <div id="zoompoltrona" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconPoltrona"></a>
+                        <img src="img/hover2poltrona.png" alt="" class="hoverobject hover2poltrona">
+                        <img src="img/zoompoltrona.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupPoltrona">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/lbNZUh5ekJA?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">As sessões da Dora sempre intensas. E a relação do Theo com o pai estava sempre no centro dos diálogos. Relembre o episódio final da 2ª temporada: <a href="http://globosatplay.globo.com/gnt/v/2909284/" target="_blank" >http://globosatplay.globo.com/gnt/v/2909284/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <!-- Div com cena ampliada da porta -->
+                    <div id="zoomporta" class="container-zoom">
+                        <a href="#" class="icon-zoom" id="iconPorta"></a>
+                        <img src="img/zoomporta.jpg" class="img-container" />
+                        <a href="#" class="voltar-bt"></a>
+                        <div class="zoomPopup popupPorta">
+                            <a href="#" class="close-bt"></a>
+                            <iframe class="popup-youtube-player" width="560" height="315" src="//www.youtube.com/embed/xjnvpHllnRA?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=0&showinfo=0&controls=0" frameborder="0" allowscriptaccess="always"></iframe>
+                            <p class="descricao">A morte do Breno foi marcante, principalmente para o seu pai. Quem não lembra do início da 2ª temporada com o processo que Theo sofreu? Reveja o episódio no GNT Play: <a href="http://globosatplay.globo.com/gnt/v/2842693/" target="_blank" >http://globosatplay.globo.com/gnt/v/2842693/</a></p>
+                        </div>
+                        <div class="mask"></div>
+                    </div>
+
+                    <div class="scroll" id='right_scroll'></div>
+                </section>
+                <footer>
+                    <span class="linha-fade"></span>
+                </footer>
+            </div>
+            <script>
+            </script>
+        </body>
+        </html>

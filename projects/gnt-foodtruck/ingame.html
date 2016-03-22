@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aplicativo do GNT - Corrida do Food Truck</title>
+	<link rel="icon" href="favicon.png" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/framework-game.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/facebook.js"></script>
+
+	<script type="text/javascript">
+		window.fbAsyncInit = function() {
+			FB.Canvas.setSize();
+		}
+	// Do things that will sometimes call sizeChangeCallback()
+	function sizeChangeCallback() {
+		FB.Canvas.setSize();
+	}
+	
+</script><!--formatted-->
+
+</head>
+<body onload="conectar();read_best_score()">
+	<div id="fb-root"></div>
+	<div class="wrapper">
+		<header class="ingame">
+			<a href="http://gnt.globo.com/programas/food-truck-a-batalha/" target="_blank"><h1 class="main-logo"></h1></a>
+			<a><img class="intro-logo-app" src="images/logo-app.png" alt="Corrida do Food Truck" width="200"></a>
+			<a href="http://gnt.globo.com/" target="_blank"><img src="images/logo-gnt-header-ingame.png" alt=""></a>
+		</header>
+		<section class="faixa-game">
+
+			<div id="racer">
+
+				<div class="box-instrucoes">
+					<p>Como Jogar</p>
+					<p>Utilize as setas do teclado para controlar o Food Truck</p>
+					<img src="images/arrow_keys.png" alt="">
+					<a href="#" class="bt-begin">
+						<span>Começar</span>
+						Começar
+					</a>
+				</footer>
+			</div>
+
+
+			<div id="hud">
+				<span id="speed"            class="hud"><span id="speed_value" class="value">0</span> km/h</span>
+				<span id="current_lap_time" class="hud">Tempo: <span id="current_lap_time_value" class="value">0.0</span></span>
+				<span id="last_lap_time"    class="hud">Último Tempo: <span id="last_lap_time_value" class="value">0.0</span></span>
+				<span id="fast_lap_time"    class="hud">Tempo mais rápido: <span id="fast_lap_time_value" class="value">0.0</span></span>
+			</div>
+			<canvas id="canvas">
+				<div class="box-nosupport">
+					<h2>Desculpe, seu browser não suporta os recursos do jogo :(</h2>
+					<p>Atualize ou troque o seu browser, aqui vai algumas sugestões de browsers</p>
+					<ul>
+						<li><a href="https://www.google.com.br/chrome/browser/desktop/"><img src="images/icon-chrome.png" alt=""></a></li>
+						<li><a href="https://www.mozilla.org/pt-BR/firefox/new/"><img src="images/icon-firefox.png" alt=""></a></li>
+						<li><a href="http://windows.microsoft.com/pt-pt/internet-explorer/download-ie"><img src="images/icon-ie.png" alt=""></a></li>
+						<li><a href="http://www.opera.com/pt"><img src="images/icon-opera.png" alt=""></a></li>
+					</ul>
+				</div>
+			</canvas>
+			<!-- Carregando... -->
+			<div class="splash">
+				<img src="images/splash.png" alt="">
+			</div>
+		</div>
+
+
+		<!-- Div abaixo para acionar quando terminar a corrida -->
+		<div id="conclusion" class="conclusion">
+			<div class="clouds">
+				<div class="lightbox-conclusion">
+					<div class="conclusion-result">
+						<p>Parabéns, <span id='user'> </span> </p>
+						<p>Seu tempo foi de:</p>
+						<p id='time-result' class="time-result">
+							<!-- Aqui entra tempo dinâmico -->
+						</p>
+					</div>
+					<div class="conclusion-share">
+						<p>Compartilhe</p>
+						<a href="#" class="bt-share bt-fb facebook"><img src="images/fb-icon.png" alt="Facebook"></a>
+						<a href="#" class="bt-share bt-twitter twitter"><img src="images/fb-twitter.png" alt="Twitter"></a>
+					</div>
+
+				</div>
+				<div class="bt-actions-conclusion">
+					<a href="ranking.php" class="bt-ranking intro-bt-seu-foodtruck">
+						<span>Ranking</span>
+						Ranking
+					</a>
+					<a href="#" class="bt-desafiar-conclusion">
+						<span>Desafie seus amigos</span>
+						Desafie seus amigos
+					</a>
+					<a href="ingame.html" class="bt-inicio-conclusion">
+						<span>Reiniciar</span>
+						Reiniciar
+					</a>
+					<div class="customize-conclusion">
+						<div class="customize-box">
+							<p></p>
+							<div class="tag-custom-conclusion">
+								<span>Dar nome ao Truck</span>
+								<span class="tag-cores">Cor</span>
+								<span class="tag-design">Design</span>
+								<span class="tag-tipo">Tipo de Comida</span>
+								<span class="tag-adesivo">Adesivo</span>
+								<span class="tag-planos">Plano de Fundo</span>
+							</div>
+						</div>
+						<div class="bt-customize-conclusion">
+							<a href="mural-foodtruck.html" class="bt-mural-conclusion">
+								<span>Customize seu Truck</span>
+								Customize seu Truck
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<footer class="game">
+		
+		<a href="index.html" class="bt-inicio bt-footer-inicio">
+			<span>Início</span>
+			Início
+		</a>
+	</footer>
+</div>
+<script src="js/game-configs.js"></script>
+<script src="js/game-script.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

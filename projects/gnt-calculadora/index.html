@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aplicativo do GNT - Calculadora de Festas Infantis</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta property="og:title" content="Fazendo a Festa | Novo programa do GNT" />
+	<meta property="og:url" content="http://www.apps.blogfarm.com.br/gnt-calculadora-festas/" />
+	<meta property="og:description" content="Aplicativo Calculadora de Festas GNT | Não deixe faltar nada na sua festa!" />
+	<meta property="og:image" content="http://www.apps.blogfarm.com.br/gnt-calculadora-festas/images/ImageShare.jpg" />
+
+	<script src="js/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script> 
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/SliderCalculator.js"></script>
+
+	<script type="text/javascript">
+		window.fbAsyncInit = function() {
+			FB.Canvas.setSize();
+		}
+        // Do things that will sometimes call sizeChangeCallback()
+        function sizeChangeCallback() {
+        	FB.Canvas.setSize();
+        }
+    </script><!--formatted--> 
+
+</head>
+<body>
+
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=610161915783036&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<div class="wrapper">
+		<h2 class="for-print">Calculadora de Festas</h2>
+		<header>
+			<div class="title-header">
+				<p>Calculadora de</p>
+				<h2>Festas</h2>
+			</div>
+			<img src="images/logo-e-fernanda.png" title="Fazendo a Festa com Fernanda Rodrigues" alt="" class="logo">
+			<div class="faixa-header">
+				<p>Calcule a quantidade de comidinhas, bebidas, doces e brindes de acordo com o número de convidados. Não deixe faltar nada na sua festa!</p>
+			</div>
+		</header>
+		<section class="escolha-convidados">
+			<h4 class="for-print">Número de Convidados</h4>
+			<h4 class="title-section">Escolha o número de convidados</h4>
+			<div class="sliderCalculatorMultiplier adultos">
+				<div class="sliderCalculatorBar" data-uom="Adulto(s)" data-range="1|300" data-out="salgadinhofrito+2|maissalgadinhofrito+10|salgadinhoassado+2|maissalgadinhoassado+10|minisanduiche+2|minipizza+2|cachorroquente+2|minialmoco+1|batatafrita+1|pipoca+1|docinhos+3|chocolate+2|bolo+1|saladinhadefrutas+2|sorveteoupicole+1|refrigerante+250|maisrefri+500|agua+500|suco+250|maissuco+500|cerveja+700"></div>
+				<div class="sliderCalculatorBarLegend">
+					<span class="max">300</span>
+					<span class="min">1</span>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<div class="sliderCalculatorMultiplier criancas">
+				<div class="sliderCalculatorBar" data-uom="Criança(s)" data-range="1|200" data-out="salgadinhofrito+2|maissalgadinhofrito+10|salgadinhoassado+2|maissalgadinhoassado+10|minisanduiche+2|minipizza+2|cachorroquente+2|minialmoco+1|batatafrita+1|pipoca+1|docinhos+3|chocolate+2|bolo+1|saladinhadefrutas+2|sorveteoupicole+1|refrigerante+250|maisrefri+500|agua+500|suco+250|maissuco+500|tubetecombalas+1|latinhacombalas+1|lembrancinha+1"></div>
+				<div class="sliderCalculatorBarLegend">
+					<span class="max">200</span>
+					<span class="min">1</span>
+				</div>
+			</div>
+		</section>
+		<section class="cardapio">
+			<div class="title-menu">
+				<h2>MENU</h2>
+			</div>
+			<h4 class="for-print">Abaixo estão os itens que você selecionou para sua festa:</h4>
+			<h4 class="title-section">Clique nos itens que deseja excluir da sua festa</h4>
+			<div class="classe-menu">
+				<span class="vert-dots"></span>
+				<h4 class="for-print">Salgados</h4>
+				<h3 class="salgados">Salgados</h3>
+				<div class="sliderCalculatorMultiplicands">
+					<div class="sliderCalculatorMultiplicand salgadinhofrito">
+						<div class="sliderCalculatorDisplay">
+							<span id="salgadinhofrito"></span>
+						</div>
+						<h4>Salgadinho Frito</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand maissalgadinhofrito">
+						<div class="sliderCalculatorDisplay">
+							<span id="maissalgadinhofrito"></span>
+						</div>
+						<h4>Salgadinho Frito</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand salgadinhoassado">
+						<div class="sliderCalculatorDisplay">
+							<span id="salgadinhoassado"></span>
+						</div>
+						<h4>Salgadinho Assado</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand maissalgadinhoassado">
+						<div class="sliderCalculatorDisplay">
+							<span id="maissalgadinhoassado"></span>
+						</div>
+						<h4>Salgadinho Assado</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand minisanduiche">
+						<div class="sliderCalculatorDisplay">
+							<span id="minisanduiche"></span>
+						</div>
+						<h4>Minissanduíche</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand minipizza">
+						<div class="sliderCalculatorDisplay">
+							<span id="minipizza"></span>
+						</div>
+						<h4>Minipizza</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand cachorroquente">
+						<div class="sliderCalculatorDisplay">
+							<span id="cachorroquente"></span>
+						</div>
+						<h4>Cachorro-Quente</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand minialmoco">
+						<div class="sliderCalculatorDisplay">
+							<span id="minialmoco"></span>
+						</div>
+						<h4>Minialmoço ou Jantar</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand batatafrita">
+						<div class="sliderCalculatorDisplay">
+							<span id="batatafrita"></span>
+						</div>
+						<h4>Batata Frita <em>(saquinho)</em></h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand pipoca">
+						<div class="sliderCalculatorDisplay">
+							<span id="pipoca"></span>
+						</div>
+						<h4>Pipoca <em>(saquinho)</em></h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="classe-menu">
+				<span class="vert-dots"></span>
+				<h4 class="for-print">Doces</h4>
+				<h3 class="doces">Doces</h3>
+				<div class="sliderCalculatorMultiplicands">
+					<div class="sliderCalculatorMultiplicand docinhos">
+						<div class="sliderCalculatorDisplay">
+							<span id="docinhos"></span>
+						</div>
+						<h4>Docinhos</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand chocolate">
+						<div class="sliderCalculatorDisplay">
+							<span id="chocolate"></span>
+						</div>
+						<h4>Chocolate</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand cupcake">
+						<div class="sliderCalculatorDisplay">
+							<span id="cupcake">20</span>
+						</div>
+						<h4>Cupcake <em>* Item decorativo. Não se calcula por pessoa.</em></h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand biscoitodecorado">
+						<div class="sliderCalculatorDisplay">
+							<span id="biscoitodecorado">15</span>
+						</div>
+						<h4>Biscoito Decorado <em>* Item decorativo. Não se calcula por pessoa.</em></h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand bolo">
+						<div class="sliderCalculatorDisplay">
+							<span id="bolo"></span>
+						</div>
+						<h4>Bolo <em>(fatias)</em></h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand saladinhadefrutas">
+						<div class="sliderCalculatorDisplay">
+							<span id="saladinhadefrutas"></span>
+						</div>
+						<h4>Saladinha de Frutas <em>(potinho)</em></h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand sorveteoupicole">
+						<div class="sliderCalculatorDisplay">
+							<span id="sorveteoupicole"></span>
+						</div>
+						<h4>Sorvete ou Picolé</h4>
+					</div>
+				</div>
+			</div>
+			<div class="classe-menu">
+				<h4 class="for-print">Bebidas</h4>
+				<h3 class="bebidas">Bebidas</h3>
+				<div class="sliderCalculatorMultiplicands cf">
+					<div class="sliderCalculatorMultiplicand refrigerante">
+						<div class="sliderCalculatorDisplay">
+							<span id="refrigerante" data-uom="ml|l"></span>
+						</div>
+						<h4>Refrigerante</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand maisrefri">
+						<div class="sliderCalculatorDisplay">
+							<span id="maisrefri" data-uom="ml|l"></span>
+						</div>
+						<h4>Refrigerante</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand agua">
+						<div class="sliderCalculatorDisplay">
+							<span id="agua" data-uom="ml|l"></span>
+						</div>
+						<h4>Água</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand suco">
+						<div class="sliderCalculatorDisplay">
+							<span id="suco" data-uom="ml|l"></span>
+						</div>
+						<h4>Suco</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand maissuco">
+						<div class="sliderCalculatorDisplay">
+							<span id="maissuco" data-uom="ml|l"></span>
+						</div>
+						<h4>Suco</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand cerveja">
+						<div class="sliderCalculatorDisplay">
+							<span id="cerveja" data-uom="ml|l"></span>
+						</div>
+						<h4>Cerveja</h4>
+					</div>
+				</div>
+				<h4 class="for-print">Brindes</h4>
+				<h3 class="brindes">Brindes</h3>
+				<div class="sliderCalculatorMultiplicands">
+					<div class="sliderCalculatorMultiplicand tubetecombalas">
+						<div class="sliderCalculatorDisplay">
+							<span id="tubetecombalas" class="addSeven"></span>
+						</div>
+						<h4>Tubete com Balas</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand latinhacombalas">
+						<div class="sliderCalculatorDisplay">
+							<span id="latinhacombalas" class="addSeven"></span>
+						</div>
+						<h4>Latinha com Balas ou Chocolate</h4>
+					</div>
+					<div class="sliderCalculatorMultiplicand lembrancinha">
+						<div class="sliderCalculatorDisplay">
+							<span id="lembrancinha" class="addSeven"></span>
+						</div>
+						<h4>Lembrancinha para crianças</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="share-and-print">
+			<h4 class="title-section">Compartilhe e imprima a lista da sua festa!</h4>
+			<div class="bts-action">
+				<div class="sliderCalculatorMultiplicant print">
+					<a class="sliderCalculatorButton">Imprimir</a>
+				</div>
+				<a href="#" class="facebook"><img src="images/fb-share.png" alt=""></a>
+				<a href="#" class="twitter"><img src="images/twitter-share.png" alt=""></a>
+				<a href="http://gnt.globo.com/" target=_blank class="logo-gnt"><img src="images/gnt-logo.png" alt="GNT"></a>
+			</div>
+		</section>
+		<section class="faixa-instagram">
+			<div class="box-instagram">
+				<img src="images/icon-instagram.png" alt="">
+				<p>Poste fotos de festas infantis usando a hashtag</p>
+				<h3>#FazendoaFestaNoGNT</h3>
+			</div>
+			<div class="box-dicasdecor">
+				<p><a href="http://gnt.globo.com/programas/fazendo-a-festa/" target="_blank">Clique aqui</a> e veja dicas de decoração, bolos e doces, buffet e animação para a festa infantil</p>
+			</div>
+		</section>
+		<section class="for-print faixa-txt-print">
+			<img src="images/GNT-black.png" alt="GNT" class="gnt-black">
+			<p class="p-for-print">Veja dicas de decoração, bolos e doces, buffet e animação para festa infantil na página <strong>gnt.com.br/fazendoafesta</strong></p>
+		</section>
+	</div>
+	<script src="js/main.js?v=1"></script>
+	<script>
+		$('.sliderCalculatorBar').sliderCalculator();
+		
+		$('.sliderCalculatorBarDisplay').draggable({containment: "parent"});
+		$('.sliderCalculatorHandle').draggable({containment: "parent"});
+	</script>
+</body>
+</html>

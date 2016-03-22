@@ -1,0 +1,7 @@
+/* line 1, ../../src/scss/ie/ie.scss */
+.ie8 #quiz .header-pergunta:after, .ie9 #quiz .header-pergunta:after {
+  height: 14px;
+  width: 918px;
+}
+
+/*# sourceMappingURL=ie.css.map */
