@@ -5,8 +5,13 @@ var gulp = require('gulp'),
     pl = require('gulp-load-plugins')(),
     cp = require('child_process');
 
+function jumpError (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
+
 gulp.task('watch', function() {
-    gulp.watch('src/_styl/**/*.styl', ['stylus']);
+    gulp.watch('assets/_styl/**/*.styl', ['stylus']);
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch([
         '**/*.html',
@@ -24,13 +29,15 @@ var messages = {
 
 // Style
 gulp.task('stylus', function() {
-    return gulp.src('./src/_styl/main.styl')
+    return gulp.src('./assets/_styl/main.styl')
         .pipe(pl.sourcemaps.init())
         .pipe(pl.stylus({
             compress: true
         }))
+        .on('error', jumpError)
         .pipe(pl.autoprefixer('last 2 versions'))
         .pipe(pl.sourcemaps.write('.'))
+        .on('error', jumpError)
         .pipe(gulp.dest('_site/assets/css/'))
         .pipe(browserSync.reload({
             stream: true
