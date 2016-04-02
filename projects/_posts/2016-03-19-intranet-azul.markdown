@@ -1,8 +1,10 @@
 ---
-layout: project
+layout: post
 client: Azul Seguros
-categories: project work
-project_name: Intranet Azul
+categories:
+    - project
+    - work
+title: Intranet Azul
 project_type: Site Intranet
 image_paths:
     - images/azulseguros-intranet-1.jpg

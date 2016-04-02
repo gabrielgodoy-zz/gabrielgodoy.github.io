@@ -1,7 +1,9 @@
 ---
-layout: project
+layout: post
 client: CAU | RJ
-categories: project work
+categories:
+    - project
+    - work
 project_name: Chapa 2
 project_type: Hotsite
 image_paths:

@@ -18,4 +18,4 @@ compress_html:
   endings: []
   profile: false
 
-exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']
+exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby', 'gulpfile.js']
