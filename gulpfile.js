@@ -1,14 +1,16 @@
 'use strict';
 
 var gulp = require('gulp'),
+    jeet = require("jeet"),
+    rupture = require("rupture"),
     browserSync = require('browser-sync'),
     pl = require('gulp-load-plugins')(),
     cp = require('child_process'),
     env = require('minimist')(process.argv.slice(2));
 
-function jumpError (error) {
-  console.log(error.toString());
-  this.emit('end');
+function jumpError(error) {
+    console.log(error.toString());
+    this.emit('end');
 }
 
 var messages = {
@@ -39,9 +41,11 @@ Style
 */
 gulp.task('stylus', () => {
     return gulp.src('./assets/_styl/main.styl')
+        .on('error', jumpError)
         .pipe(pl.sourcemaps.init())
         .pipe(pl.stylus({
-            compress: true
+            compress: true,
+            use: [jeet(), rupture()]
         }))
         .on('error', jumpError)
         .pipe(pl.autoprefixer('last 2 versions'))
@@ -68,9 +72,10 @@ gulp.task('js', () => {
 /* =============================================================
 Watcher
 */
-gulp.task('watch', () =>  {
+gulp.task('watch', () => {
     gulp.watch('assets/_styl/**/*.styl', ['stylus']);
     gulp.watch('assets/js/**/*.js', ['js']);
+    gulp.watch('_config.yml', ['nodemon']);
     gulp.watch([
         '**/*.html',
         '**/*.md',

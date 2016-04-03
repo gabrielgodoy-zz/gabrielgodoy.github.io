@@ -1,36 +1,21 @@
 ---
-layout: home
+layout: default
 ---
 
-<style type="text/css">
-    body {
-        background: #1c94c4;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    h1 {
-        font-family: Helvetica, 'Verdana';
-        font-weight: 100;
-    }
-</style>
-
-.circle
-
-<!-- <div class="home">
-    <h1 class="page-heading">Posts</h1>
+<div class="home">
     <ul class="post-list">
         {% for post in site.posts %}
-            {% unless post.categories contains 'project' %}
-                <li>
-                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <h2>
-                      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </h2>
-                </li>
-            {% endunless %}
+        {% unless post.categories contains 'project' %}
+        <li class="post-list__card post">
+            <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="post__content">
+                    <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+                    <h2 class="post__title">{{ post.title }}</h2>
+                    <p class="post__desc">{{ post.description }}</p>
+                </div>
+            </a>
+        </li>
+        {% endunless %}
         {% endfor %}
     </ul>
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div> -->
+</div>

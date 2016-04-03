@@ -1,6 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Hi, my name is Gabriel and I work as a front-end developer"
+description: "There’s a JavaScript decorators proposal in the works. We take a look at how it works
+and why it’s useful."
 date:   2016-03-19 21:51:32 -0300
 categories: jekyll update
 ---
