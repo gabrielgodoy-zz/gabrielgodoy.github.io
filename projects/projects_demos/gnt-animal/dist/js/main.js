@@ -260,7 +260,7 @@ $.event.special.mwheelIntent = {
             mwheelI.elem = this;
 			mwheelI.pos = pos;
 			minDif = 250;
-			
+
 			clearTimeout(shortDelay);
 			shortDelay = setTimeout(function(){
 				minDif = 10;
@@ -278,7 +278,7 @@ $.fn.extend({
 	mwheelIntent: function(fn) {
 		return fn ? this.bind("mwheelIntent", fn) : this.trigger("mwheelIntent");
 	},
-	
+
 	unmwheelIntent: function(fn) {
 		return this.unbind("mwheelIntent", fn);
 	}
@@ -298,7 +298,7 @@ function popupwindow(url, title, w, h) {
 }
 
 $(document).ready(function(){
-	$('body').prepend('<div class="warning-box" style="color:#333333; padding:20px; background: #ecfaff; border: #d8d8d8 solid 1px; margin: 20px auto; max-width: 750px; font-size: 14px; font-family:Verdana; text-align:center">Este projeto é demonstrativo, por isso certas funcionalidades foram bloqueadas ou removidas.</div>');
+	$('body').prepend('<div class="warning-box" style="color:#333333; padding:20px; background: #ecfaff; border: #d8d8d8 solid 1px; margin: 20px auto; max-width: 750px; font-size: 14px; font-family:Verdana; text-align:center">This is a demo, and for that reason certain functionalities may not work as expected.</div>');
 	$('.container-perguntas').jScrollPane({
 		animateScroll: true,
 		animateDuration: 650,

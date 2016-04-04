@@ -12,7 +12,7 @@ $(window).bind("load", function() {
 });
 
 $(document).ready(function() {
-    $('body').prepend('<div class="warning-box" style="color:#333333; padding:20px; background: #ecfaff; border: #d8d8d8 solid 1px; margin: 20px auto; max-width: 750px; font-size: 14px; font-family:Verdana; text-align:center">Este projeto é demonstrativo, por isso certas funcionalidades foram bloqueadas ou removidas.</div>');
+    $('body').prepend('<div class="warning-box" style="color:#333333; padding:20px; background: #ecfaff; border: #d8d8d8 solid 1px; margin: 20px auto; max-width: 750px; font-size: 14px; font-family:Verdana; text-align:center">This is a demo, and for that reason certain functionalities may not work as expected.</div>');
     //Controle do Som
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', 'tel.mp3');

@@ -1,21 +1,30 @@
 .post-list__card
-    border-radius primary-border-radius
-    box-shadow primary-box-shadow
-    background white
-    height 185px
-
-.post__link
     display flex
     align-items center
-    height 100%
-    padding 0 55px
 
 .post__title
-    color: primary-heading
-    font-family heading-font
+    color primaryHeading
+    font-family headingFont
     rem(24px)
 
 .post__desc
     rem(16px)
-    font-family body-font
-    color text-color
+    font-family bodyFont
+    line-height 28px
+    color textColor
+
+.post-list__main
+    box-shadow primaryBoxShadow
+    border-radius primaryBorderRadius
+    display flex
+    align-items center
+    background: white
+    min-height 185px
+    width calc(100% - 200px)
+
+.post__link
+    height 100%
+    width calc(100% - 110px)
+    padding: 0 20px 0 55px
+    display flex
+    align-items center

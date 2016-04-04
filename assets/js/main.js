@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){"use strict"});
+document.addEventListener("DOMContentLoaded",function(){"use strict";if(document.getElementsByClassName("single-post")[0]){var s=document.getElementsByClassName("share-bts")[0],e=document.getElementsByClassName("single-post")[0];window.addEventListener("scroll",function(){window.scrollY-20>e.offsetTop?(e.classList.add("single-post--leftmargin"),s.classList.add("share-bts--fixed")):(e.classList.remove("single-post--leftmargin"),s.classList.remove("share-bts--fixed"))})}});

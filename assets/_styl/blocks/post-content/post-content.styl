@@ -1,0 +1,92 @@
+.single-post
+    background white
+    float left
+    border-radius primaryBorderRadius
+    box-shadow primaryBoxShadow
+    height 100%
+    padding 75px 70px
+    width calc(100% - 53px)
+    margin-bottom 80px
+
+    &.single-post--leftmargin
+        margin-left 53px
+
+.single-post__content
+    margin-bottom 75px
+    color textColor
+    p
+        margin-bottom 20px
+        line-height 35px
+    a
+        color primaryHeading
+        font-weight bold
+    &.single-post__content--project
+        margin-bottom 0
+
+.single-post__demo
+    border-radius primaryBorderRadius
+    background-image linear-gradient( 90deg, rgb(26,188,156) 0%, rgb(36,220,184) 100%)
+    width 200px
+    color white
+    text-align center
+    padding 10px 20px
+    display block
+    margin 0 auto 40px
+
+
+.single-post__title
+    font-family headingFont
+    rem(36px)
+    color primaryHeading
+
+.single-post__meta
+    margin-bottom 35px
+
+.single-post__time,
+.single-post__reading-time
+    color textColor
+
+.single-post__time
+    font-family fjallaFont
+    rem(16px)
+    margin-right 45px
+    display inline-block
+    vertical-align middle
+
+.single-post__reading-time
+    rem(12px)
+    font-family bodyFont
+
+.share-bts
+    float left
+    margin-right 15px
+    position relative
+    top 80px
+
+    &.share-bts--fixed
+        position fixed
+        top 60px
+
+.share-bts__icon
+    background white
+    display flex
+    align-items center
+    justify-content center
+    box-shadow primaryBoxShadow
+    margin-bottom 9px
+    width 38px
+    height 38px
+    opacity 0.5
+    transition opacity 0.3s
+    border-radius 50%
+
+    &hover
+        opacity 1
+
+.share-bts__icon--tw
+    img
+        width 22px
+
+.share-bts__icon--fb
+    img
+        width 12px

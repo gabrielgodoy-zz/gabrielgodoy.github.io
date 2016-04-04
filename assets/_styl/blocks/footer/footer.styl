@@ -1,0 +1,42 @@
+body
+    display flex
+    flex-direction column
+    min-height calc(100vh - 40px)
+
+.page-content
+    flex 1
+
+.site-footer
+    padding 50px 0
+    text-align center
+    border-top 1px solid hightlightColor
+    margin-top 60px
+
+.site-footer__msg
+    font-family fjallaFont
+    margin-right 20px
+    margin-top -6px
+    color hightlightColor
+    display inline-block
+    vertical-align middle
+    rem(24px)
+
+.site-footer__icon svg path
+    transition fill 0.3s
+
+.site-footer__icon svg:hover path
+        fill white
+
+.site-footer__icons,
+.site-footer__icon
+    display inline-block
+    vertical-align middle
+
+.site-footer__icon
+    margin-right 8px
+
+.site-footer__icon--github svg
+    width 31px
+
+.site-footer__icon--tw svg
+    width 34px

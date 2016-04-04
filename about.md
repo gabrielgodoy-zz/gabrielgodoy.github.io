@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+subtitle: Hi, my name is Gabriel and I work as a front-end developer
 permalink: /about/
 ---
 

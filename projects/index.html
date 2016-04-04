@@ -5,15 +5,21 @@ permalink: /projects/
 ---
 
 <div class="project">
-    <h1 class="page-heading">Projects</h1>
     <ul class="project-list">
         {% for post in site.categories.project %}
-            <li>
-                <h2>
-                    <a class="project-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.client }}</a>
-                </h2>
-            </li>
+        <li class="project-list__item">
+            <a class="project-list__link" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="project-list__cover">
+                    <img src="../assets/images/projects/{{ post.cover | prepend: site.baseurl }}">
+                </div>
+                <div class="project-list__details">
+                    <h2 class="project-list__title">{{ post.client }}</h2>
+                    <p class="project-list__desc">
+                        {{post.description}}
+                    </p>
+                </div>
+            </a>
+        </li>
         {% endfor %}
     </ul>
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </div>

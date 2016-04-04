@@ -2,7 +2,7 @@
 /* Base
    ========================================================================== */
 /**
- * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ * Establish a vertical rhythm unit using $baseFontSize, $baseLineHeight,
  * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
  * body `font-size` is set using `em` units.
  */

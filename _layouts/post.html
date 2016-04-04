@@ -3,33 +3,64 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-    </header>
+    {% include share.html %}
 
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
+    <div class="single-post">
+        <header class="single-post__header">
+            <h1 class="single-post__title" itemprop="name headline">{{ page.title }}</h1>
+            {% if page.categories contains 'project' %}
+            {% else %}
+            <p class="single-post__meta">
+                <time class="single-post__time" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                {% include minutes-to-read.html pageOrPost=page %}
+                <span class="single-post__reading-time" title="Estimated read time">
+                    <img class="post__time-icon" src="../assets/images/post__time.svg" alt="Time to read icon">
+                    {{ minutesText }}
+                </span>
+            </p>
+            {% endif %}
+        </header>
 
-        <div id="disqus_thread"></div>
-        <script>
-            'use strict';
+        {% if page.categories contains 'project' %}
+        {% if page.demo %}
+        <a href="/projects/{{page.demo}}" target="_blank" class="single-post__demo">
+            View demo
+        </a>
+        {% endif %}
+        <div class="single-post__content single-post__content--project" itemprop="articleBody">
+            {{ content }}
+        </div>
+        {% else %}
+        <div class="single-post__content" itemprop="articleBody">
+            {{ content }}
+        </div>
+        {% endif %}
 
-            var disqus_config = function () {
-                this.page.url = '{{ site.url }}{{ page.url }}';
-                this.page.identifier = '{{ page.url }}';
-            };
+        {% unless page.categories contains 'project' %}
+        {% include about-author.html %}
+        {% endunless %}
 
-            (function() {
-                var d = document, s = d.createElement('script');
-
-                s.src = '//gabrielgodoy.disqus.com/embed.js';
-
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </div>
+
+    <div id="disqus_thread"></div>
+
+    <script>
+        'use strict';
+
+        var disqus_config = function () {
+            this.page.url = '{{ site.url }}{{ page.url }}';
+            this.page.identifier = '{{ page.url }}';
+        };
+
+        (function() {
+            var d = document, s = d.createElement('script');
+
+            s.src = '//gabrielgodoy.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 </article>

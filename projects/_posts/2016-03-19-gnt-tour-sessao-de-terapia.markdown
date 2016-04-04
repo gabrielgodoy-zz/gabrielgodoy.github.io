@@ -1,14 +1,17 @@
 ---
-layout: project
+layout: post
 client: GNT
+description: App to promote the second season of a Brazilian TV show
 categories: project work
 project_name: Tour Sessão de Terapia
 project_type: Aplicativo Web
+cover: cover-portifolio-terapia.jpg
 image_paths:
     - images/gnt-sessaoterapia-1.jpg
     - images/gnt-sessaoterapia-2.jpg
     - images/gnt-sessaoterapia-3.jpg
-demo_path: projects/gnt-sessao-terapia
+demo: "projects_demos/gnt-sessao-terapia"
+twitter_text: "Awesome work =)"
 ---
 
 O seriado "Sessão de Terapia" iria começar sua 3º temporada, e a equipe do GNT gostaria de algo para promover essa estreia. A ideia da equipe do GNT foi a de criar um cenário navegável do consultório do Theo (Protagonista), onde o usuário pudesse interagir com os objetos do cenário e entender melhor a série, através de vídeos e textos.

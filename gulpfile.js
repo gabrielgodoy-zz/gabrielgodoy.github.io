@@ -74,8 +74,7 @@ Watcher
 */
 gulp.task('watch', () => {
     gulp.watch('assets/_styl/**/*.styl', ['stylus']);
-    gulp.watch('assets/js/**/*.js', ['js']);
-    gulp.watch('_config.yml', ['nodemon']);
+    gulp.watch(['assets/js/**/*.js', '!assets/js/main.js'], ['js', 'jekyll-rebuild']);
     gulp.watch([
         '**/*.html',
         '**/*.md',
@@ -83,7 +82,8 @@ gulp.task('watch', () => {
         '_includes/*.html',
         '_layouts/*.html',
         'projects/_posts/*',
-        '_posts/*'
+        '_posts/**/*.*',
+        '!_site/*'
     ], ['jekyll-rebuild']);
 });
 

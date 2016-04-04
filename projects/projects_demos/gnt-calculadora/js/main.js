@@ -6,7 +6,7 @@ function popupwindow(url, title, w, h) {
 
 (function($) {
 
-    $('body').prepend('<div class="warning-box" style="color:#333333; padding:20px; background: #ecfaff; border: #d8d8d8 solid 1px; margin: 20px auto; max-width: 750px; font-size: 14px; font-family:Verdana; text-align:center">Este projeto é demonstrativo, por isso certas funcionalidades foram bloqueadas ou removidas.</div>');
+    $('body').prepend('<div class="warning-box" style="color:#333333; padding:20px; background: #ecfaff; border: #d8d8d8 solid 1px; margin: 20px auto; max-width: 750px; font-size: 14px; font-family:Verdana; text-align:center">This is a demo, and for that reason certain functionalities may not work as expected.</div>');
    	//DOM Ready
    	// Anula de forma 'fake' os dados de cada item ao clicar
    	$('.sliderCalculatorMultiplicand').on('click', function(){
@@ -38,7 +38,7 @@ function popupwindow(url, title, w, h) {
               $('.maissalgadinhoassado').append('<div class="sliderCalculatorDisplayOff"><span>0</span></div>');
               $('.maissalgadinhoassado').css('visibility', 'visible');
            }
-        } 
+        }
      } else if ($(this).is('.minialmoco, .minisanduiche, .minipizza') && $('.minialmoco, .minisanduiche, .minipizza').filter('.itemoff').length === 3) {
       $('.salgadinhofrito, .salgadinhoassado').css('visibility', 'visible');
       if(!$('.maissalgadinhofrito').hasClass('itemoff')) {
@@ -94,7 +94,7 @@ function popupwindow(url, title, w, h) {
     $('.item-close', this).fadeIn('fast');
     $('.sliderCalculatorDisplayOff', this).remove();
     $('.maisrefri').hide();
-    $('.refrigerante').css('visibility', 'visible');	
+    $('.refrigerante').css('visibility', 'visible');
  }
 } else if ($(this).hasClass('refrigerante')) {
    if (!$(this).hasClass('itemoff')){
@@ -109,7 +109,7 @@ function popupwindow(url, title, w, h) {
     $('.item-close', this).fadeIn('fast');
     $('.sliderCalculatorDisplayOff', this).remove();
     $('.maissuco').hide();
-    $('.suco').css('visibility', 'visible');	
+    $('.suco').css('visibility', 'visible');
  }
 } else if ($(this).hasClass('maissuco')) {
    $(this).hide();
@@ -124,7 +124,7 @@ function popupwindow(url, title, w, h) {
    $(this).append('<div class="item-close"></div>');
    $('.item-close', this).fadeIn('fast');
    $('.suco .sliderCalculatorDisplayOff').remove();
-   $('.refrigerante').css('visibility', 'visible');	
+   $('.refrigerante').css('visibility', 'visible');
 } else if (!$(this).hasClass('itemoff')){
    $(this).addClass('itemoff');
    $('.item-close', this).remove();
@@ -163,7 +163,7 @@ function popupwindow(url, title, w, h) {
          if($('.sliderCalculatorMultiplicand.salgadinhofrito').css('visibility') === 'hidden'){
             $('.sliderCalculatorMultiplicand.salgadinhofrito').css('display', 'none');
          }
-         
+
          $('.sliderCalculatorMultiplicands').each(function(){
             console.log($(this).children('.sliderCalculatorMultiplicand').length);
             console.log($(this).children('.itemoff').length);
@@ -197,13 +197,13 @@ function popupwindow(url, title, w, h) {
 
 	// Twitter
 	var twitterMsg = 'https://twitter.com/intent/tweet?text=Calcule a quantidade de comidinhas, bebidas, doces e brindes para a sua festa. %23FazendoaFestaNoGNT http://goo.gl/CPCPX0';
-	
+
 	$('.twitter').attr('href', twitterMsg);
 
 	$('.twitter').click(function(e) {
 		e.preventDefault();
 		popupwindow(this.href, 'Twitter', 600, 300);
 	});
-	
+
 
 })(jQuery);

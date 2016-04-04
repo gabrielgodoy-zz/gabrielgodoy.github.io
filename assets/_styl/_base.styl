@@ -17,9 +17,9 @@ $clearfix
         clear both
 
 body
-    font base-font-weight base-font-size/base-line-height body-font
+    font baseFontWeight baseFontSize/baseLineHeight bodyFont
     -webkit-font-smoothing antialiased
-    color text-color
+    color textColor
     background-color background-color
     -webkit-text-size-adjust 100%
     -webkit-font-feature-settings "kern" 1
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 $vertical-rhythm
-    margin-bottom spacing-unit / 2
+    margin-bottom spacingUnit / 2
 
 /**
  * Images
@@ -51,13 +51,13 @@ figure > img
     display block
 
 figcaption
-    font-size small-font-size
+    font-size smallFontSize
 
 /**
  * Lists
  */
 ul, ol
-    margin-left spacing-unit
+    margin-left spacingUnit
 
 li
     > ul,
@@ -69,7 +69,7 @@ li
  * Headings
  */
 h1, h2, h3, h4, h5, h6
-    font-weight base-font-weight
+    font-weight baseFontWeight
 
 /**
  * Links
@@ -83,7 +83,7 @@ a
 blockquote
     color grey-color
     border-left 4px solid grey-color-light
-    padding-left spacing-unit / 2
+    padding-left spacingUnit / 2
     font-size 18px
     letter-spacing -1px
     font-style italic
@@ -125,4 +125,4 @@ pre
         vertical-align middle
 
         path
-            fill lighten(main-color, 50%)
+            fill lighten(mainColor, 50%)

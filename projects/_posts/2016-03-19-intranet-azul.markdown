@@ -1,16 +1,18 @@
 ---
 layout: post
 client: Azul Seguros
+description: Revamp of the intranet of a big brazilian insurance company
 categories:
     - project
     - work
 title: Intranet Azul
 project_type: Site Intranet
+cover: cover-portifolio-azul.jpg
 image_paths:
     - images/azulseguros-intranet-1.jpg
     - images/azulseguros-intranet-2.jpg
     - images/azulseguros-intranet-3.jpg
-demo_path:
+twitter_text: "Awesome work =)"
 ---
 
 A Azul Seguros necessitava modernizar a sua intranet, que é utilizada por seus funcionários para gerenciar diversas informações internas da empresa. Junto com a criação da intranet, foi preciso planejar quais os tipos de conteúdo o cliente necessitaria atualizar sozinho, para que fosse criada a infraestrutura necessária.

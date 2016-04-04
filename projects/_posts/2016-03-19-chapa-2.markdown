@@ -1,17 +1,20 @@
 ---
 layout: post
 client: CAU | RJ
+description: Project for an Architecture council in Brazil
 categories:
     - project
     - work
 project_name: Chapa 2
 project_type: Hotsite
+cover: cover-portifolio-chapa2cau.jpg
 image_paths:
     - assets/images/projects/caurj-chapa2-1.jpg
     - assets/images/projects/caurj-chapa2-2.jpg
     - assets/images/projects/caurj-chapa2-3.jpg
     - assets/images/projects/caurj-chapa2-4.jpg
-demo_path:
+demo:
+twitter_text: "Awesome work =)"
 ---
 
 As eleições para uma nova presidência iria começar no Conselho de Arquitetura e Urbanismo (CAU). O meu trabalho foi criar um hotsite para promover a Chapa número 2, que estava se candidatando. Pensei em criar um site clean, que fosse direto ao ponto, e que o usuário pudesse facilmente encontrar os ideais da Chapa 2 e suas propostas.

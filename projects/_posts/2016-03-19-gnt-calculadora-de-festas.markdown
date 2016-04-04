@@ -1,14 +1,17 @@
 ---
-layout: project
+layout: post
 client: GNT
+description: Web app to calculate the quantity of nibbles and drinks for a children party
 categories: project work
 project_name: Calculadora de Festas
 project_type: Aplicativo Web
+cover: cover-portifolio-calculadora.jpg
 image_paths:
     - images/gnt-calculadora-1.jpg
     - images/gnt-calculadora-2.jpg
     - images/gnt-calculadora-3.jpg
-demo_path: projects/gnt-calculadora
+demo: "projects_demos/gnt-calculadora"
+twitter_text: "Awesome work =)"
 ---
 
 O programa "Fazendo a Festa" estava para fazer a sua estreia no canal GNT, e a equipe do GNT precisava de um aplicativo que o usuário pudesse interagir, e ao mesmo gostariam de apresentar o novo programa ao público. O briefing chegou em minha mão com essa ideia de criar uma calcudora onde o usuário pudesse calcular a quantidade de comidas e bebidas que precisaria para uma festa com uma quantidade determinada de adultos e crianças na festa.
