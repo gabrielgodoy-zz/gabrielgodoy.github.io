@@ -12,7 +12,7 @@ twitter_text: "First commit =)"
 ---
 Hi, my name is Gabriel Godoy and I work as a front-end developer in Rio de Janeiro, Brazil.
 
-I come from a design background, but I was always interested in front-end. One day a long time ago I had the opportunity to build a website from the ground-up, when my boss at the time asked me if I could develop one for his company.
+I came from a design background, but I was always interested in front-end. One day a long time ago I had the opportunity to build a website from the ground-up, when my boss at the time asked me if I could develop one for his company.
 
 Tough days, when sites had to be compatible with IE6 😱 . But since then I never stopped doing things for the web.
 
