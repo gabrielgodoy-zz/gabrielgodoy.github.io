@@ -2,6 +2,8 @@ _site
 .sass-cache
 .jekyll-metadata
 
+*.map
+
 .idea
 .DS_store
 
