@@ -3,9 +3,10 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    {% include share.html %}
-
     <div class="single-post">
+
+        {% include share.html %}
+
         <header class="single-post__header">
             <h1 class="single-post__title" itemprop="name headline">{{ page.title }}</h1>
             {% if page.categories contains 'project' %}
@@ -42,7 +43,9 @@ layout: default
 
     </div>
 
-    <div id="disqus_thread"></div>
+    <div class="disqus-container">
+        <div id="disqus_thread"></div>
+    </div>
 
     <script>
         'use strict';
