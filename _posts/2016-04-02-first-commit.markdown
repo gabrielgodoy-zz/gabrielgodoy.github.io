@@ -18,7 +18,7 @@ Tough days, when sites had to be compatible with IE6 😱 . But since then I nev
 
 I work at Huge Rio now, a huge agency as the name says 😓 . There I have the opportunity to work with awesome projects that challenge our team on a daily basis. Damn creative designers :)
 
-It has been a pleasure to work side by side with such talented guys, like [@caiovaccaro](https://twitter.com/caiovaccaro){:target="_blank"}, [@Willian_justen](http://willianjusten.com.br/){:target="_blank"}, [@nipher_jonas](http://nipher.io/){:target="_blank"}, [@nandoacoelho](http://twitter.com/nandoacoelho){:target="_blank"} and Márcio Ribeiro (http://shiz.co/){:target="_blank"}. I am learning a lot about how to make things right...so...why not talk a little about it.
+It has been a pleasure to work side by side with such talented guys, like [@caiovaccaro](https://twitter.com/caiovaccaro){:target="_blank"}, [@Willian_justen](http://willianjusten.com.br/){:target="_blank"}, [@nipher_jonas](http://nipher.io/){:target="_blank"}, [@nandoacoelho](http://twitter.com/nandoacoelho){:target="_blank"} and [Márcio Ribeiro](http://shiz.co/){:target="_blank"}. I am learning a lot about how to make things right...so...why not talk a little about it.
 
 My main goal with this blog is to share my experiences as a front-end developer, and to talk about the new exciting stuff that I come up with everyday as well, such as new tools, frameworks and almost everything about the front-end world.
 
