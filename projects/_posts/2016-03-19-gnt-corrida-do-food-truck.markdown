@@ -7,17 +7,17 @@ project_name: Corrida do Food Truck
 project_type: Aplicativo Web
 cover: cover-portifolio-foodtruck.jpg
 image_paths:
-    - images/gnt-foodtruck-1.jpg
-    - images/gnt-foodtruck-2.jpg
-    - images/gnt-foodtruck-3.jpg
+    - gnt-foodtruck-1.jpg
+    - gnt-foodtruck-2.jpg
+    - gnt-foodtruck-3.jpg
 demo: "projects_demos/gnt-foodtruck"
 twitter_text: "Awesome work =)"
 ---
 
-Aplicativo para promover o novo programa da GNT, chamado "Corrida do Food Truck". O aplicativo se trata de uma corrida com um Food Truck. É um aplicativo com integração ao Facebook, que utiliza informações do usuário logado a rede social, como Nome, Email e sexo. Dentro do game o usuário pode customizar seu Food Truck de acordo com o tempo que ele consegue dentro da corrida. O usuário pode compartilhar no Facebook o Food Truck que ele montou dentro de app.
+This app named "Corrida do Food Truck" was made to promote a new TV show on the GNT channel. Me and my team had the idea to build a small race game where the user was in control of a foodtruck car. Depending on the score made inside the run, the user had the ability to customize his food truck and was able to share his car with his friends on Facebook or Twitter.
 
-### Tecnologias Utilizadas
-Para construir o aplicativo, foi utilizado HTML5, CSS3, JS com a biblioteca jQuery, e PHP. Um banco de dados foi criado para armazenar os tempos feitos pelos usuários durante a corrida.
+### Techs Used
+HTML5, CSS3, JS and PHP to store the scores
 
-Framework de corrida utilizado:
+Race framework utilized:
 [https://github.com/jakesgordon/javascript-racer](https://github.com/jakesgordon/javascript-racer)

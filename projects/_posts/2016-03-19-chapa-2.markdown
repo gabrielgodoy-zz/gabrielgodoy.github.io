@@ -9,15 +9,15 @@ project_name: Chapa 2
 project_type: Hotsite
 cover: cover-portifolio-chapa2cau.jpg
 image_paths:
-    - assets/images/projects/caurj-chapa2-1.jpg
-    - assets/images/projects/caurj-chapa2-2.jpg
-    - assets/images/projects/caurj-chapa2-3.jpg
-    - assets/images/projects/caurj-chapa2-4.jpg
+    - caurj-chapa2-1.jpg
+    - caurj-chapa2-2.jpg
+    - caurj-chapa2-3.jpg
+    - caurj-chapa2-4.jpg
 demo:
 twitter_text: "Awesome work =)"
 ---
 
-As eleições para uma nova presidência iria começar no Conselho de Arquitetura e Urbanismo (CAU). O meu trabalho foi criar um hotsite para promover a Chapa número 2, que estava se candidatando. Pensei em criar um site clean, que fosse direto ao ponto, e que o usuário pudesse facilmente encontrar os ideais da Chapa 2 e suas propostas.
+The elections for a new presidency were about to start on the Council of Architecture and Urbanism. My job was to create a website to promote one of the group of candidates running the election. My idea was to create a clean site, straight to the point, and that the user could easily find the main ideas of these candidates and their proposals.
 
-### Tecnologias Utilizadas
-Foi utilizado o CMS (Content Management System) Wordpress. Devido ao prazo curto que nos foi dado, optamos por dar o start no projeto com um tema Wordpress já existente no mercado, o [Agile](http://themeforest.net/item/agile-multipurpose-app-showcase-wordpress-theme/6631729). Aproveitando a estrutura *one page* deste tema criamos modificamos o conteúdo e criamos tipos de conteúdos novos de acordo com a necessidade do cliente.
+### Techs Used
+In this project Wordpress was chosen as the CMS. The time of execution was very short so we jumped into one of the most beautiful pre-made theme for Wordpress on the market at that time, named [Agile](http://themeforest.net/item/agile-multipurpose-app-showcase-wordpress-theme/6631729). The one-page structure of this theme and the easy customization made the website a great success.

@@ -23,6 +23,18 @@ layout: default
         </header>
 
         {% if page.categories contains 'project' %}
+        <div class='browser-window'>
+            <div class='top-bar'>
+                <div class='circles'>
+                    <div class="circle circle-red"></div>
+                    <div class="circle circle-yellow"></div>
+                    <div class="circle circle-green"></div>
+                </div>
+            </div>
+            <div class='content'>
+                <img src="{{site.url}}/assets/images/projects/{{page.image_paths[0]}}">
+            </div>
+        </div>
         {% if page.demo %}
         <a href="/projects/{{page.demo}}" target="_blank" class="single-post__demo">
             View demo

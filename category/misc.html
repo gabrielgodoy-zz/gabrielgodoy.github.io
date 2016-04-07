@@ -1,0 +1,36 @@
+---
+layout: default
+categories:
+    - misc
+---
+
+<main class="home single-page" id="scroll" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+    <h1 class="single-post__title">Miscellaneous</h1>
+    <div id="grid" class="row flex-grid">
+    {% for post in site.posts %}
+        {% if post.categories[0] == 'misc' %}
+            <article class="box-item post-{{post.categories[0]}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                <div class="box-body">
+                    <meta itemprop="datePublished" content="{{post.date | date_to_xmlschema }}">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%B %d, %Y" }}
+                    </time>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title category__title" itemprop="name">
+                            {{ post.title }}
+                        </h2>
+                    </a>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <p class="description">{{ post.introduction }}</p>
+                    </a>
+                    <div class="tags">
+                        {% for tag in post.tags %}
+                            <a href="/tags/#{{tag | slugify }}" class="list-tags__singletag">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+        {% endif %}
+    {% endfor %}
+    </div>
+</main>

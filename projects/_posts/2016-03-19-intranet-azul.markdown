@@ -2,22 +2,20 @@
 layout: post
 client: Azul Seguros
 description: Revamping the intranet of a big brazilian insurance company
-categories: 
-  - project
-  - work
-title: Intranet Azul
+categories:
+    - project
+    - work
+project_name: Azul Seguros
 project_type: Site Intranet
-cover: "cover-portifolio-azul.jpg"
-image_paths: 
-  - "images/azulseguros-intranet-1.jpg"
-  - "images/azulseguros-intranet-2.jpg"
-  - "images/azulseguros-intranet-3.jpg"
-twitter_text: Awesome work =)
-published: true
+cover: cover-portifolio-azul.jpg
+image_paths:
+    - azulseguros-intranet-1.jpg
+    - azulseguros-intranet-2.jpg
+    - azulseguros-intranet-3.jpg
+twitter_text: "Awesome work =)"
 ---
 
+The company Azul Seguros needed to modernize its intranet. The intranet of the company is mainly used to manage internal communication directly to their employees. Together with the creation of the intranet, a research was needed to plan which areas would need a content management system, so the update could be done by them after delivery.
 
-A Azul Seguros necessitava modernizar a sua intranet, que é utilizada por seus funcionários para gerenciar diversas informações internas da empresa. Junto com a criação da intranet, foi preciso planejar quais os tipos de conteúdo o cliente necessitaria atualizar sozinho, para que fosse criada a infraestrutura necessária.
-
-### Tecnologias Utilizadas
-Utilizando o CMS (Content Management System) Wordpress foi criada a nova intranet para a empresa Azul Seguros em 2015. Um tema exclusivo foi criado, juntamente com *custom widgets* e *plugins* para atender cada necessidade do cliente. O uso de *custom post types* e *custom fields* também se mostrou necessário para criar o tipo de conteúdo específico que o cliente desejava.
+### Techs used
+The place where I was working chose to use Wordpress to manage the content of the new intranet. An exclusive theme was built, together with *custom widgets* and *plugins* to fill all the client needs. The utilization of custom post types and custom fields was a must also specially because of their diverse and dynamic content.

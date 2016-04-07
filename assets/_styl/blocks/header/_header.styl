@@ -6,18 +6,32 @@
     padding-bottom 75px
     width 100%
 
+    @media screen and (max-width: 767px)
+        flex-direction: column
+        padding-top: 30px
+        padding-bottom: 5px
+
 .header__title
     color hightlightColor
     font-family headingFont
     rem(24px)
 
+    @media screen and (max-width: 767px)
+        margin-bottom 20px
+
 .header__job
     font-family bodyFont
     rem(14px)
 
+    @media screen and (max-width: 767px)
+        display none
+
 .header__nav
     margin-left auto
     text-transform lowercase
+
+    @media screen and (max-width: 767px)
+        margin-left 0
 
 .header__link
     color hightlightColor

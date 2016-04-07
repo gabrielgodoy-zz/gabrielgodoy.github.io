@@ -20,21 +20,21 @@ layout: default
                 <ul class="post__tags-list">
                     {% for tag in post.tags %}
                     <li class="post__tag-item">
-                        <a href="#" class="post__tag-link">{{ tag }}</a>
+                        <a href="/tags/#{{tag | slugify }}" class="post__tag-link">{{ tag }}</a>
                     </li>
                     {% endfor %}
                 </ul>
             </div>
             </div>
             <div class="post__details">
-                <p class="post__category">{{ post.categories | first }}</p>
+                <a href="{{site.url}}/category/{{post.categories[0]}}" class="post__category">{{ post.categories | first }}</a>
                 <time class="post__date">
                     {% assign d = post.date | date: "%-d"  %}
                     {{ post.date | date: "%B" }}
                     {% case d %}
-                    {% when '1' or '21' or '31' %}{{ d }}st
-                    {% when '2' or '22' %}{{ d }}nd
-                    {% when '3' or '23' %}{{ d }}rd
+                        {% when '1' or '21' or '31' %}{{ d }}st
+                        {% when '2' or '22' %}{{ d }}nd
+                        {% when '3' or '23' %}{{ d }}rd
                     {% else %}{{ d }}th
                     {% endcase %},
                     {{ post.date | date: "%Y" }}

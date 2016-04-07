@@ -2,7 +2,17 @@
     display flex
     align-items center
 
-.post__title
+    @media screen and (max-width: 767px)
+        padding 30px 0
+        display block
+
+.post-list
+    @media screen and (max-width: 767px)
+        margin-left: -20px
+        margin-right: -20px
+
+.post__title,
+.category__title
     color primaryHeading
     font-family headingFont
     rem(24px)
@@ -13,14 +23,24 @@
     line-height 28px
     color textColor
 
+
 .post-list__main
     box-shadow primaryBoxShadow
     border-radius primaryBorderRadius
     display flex
     align-items center
     background: white
+    position relative
     min-height 185px
     width calc(100% - 200px)
+
+    @media screen and (max-width: 1024px)
+        padding 30px 0
+        width 100%
+
+    @media screen and (max-width: 767px)
+        box-shadow none
+        border-radius 0
 
 .post__link
     height 100%
@@ -28,3 +48,16 @@
     padding: 0 20px 0 55px
     display flex
     align-items center
+
+    @media screen and (max-width: 767px)
+        padding: 0 20px 0 20px;
+
+.category__title
+    margin-bottom 10px
+
+.box-item
+    border-bottom 1px dotted #66cdf7
+    padding 0 0 20px
+
+    &:last-child
+        border-bottom none

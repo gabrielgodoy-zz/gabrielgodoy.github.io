@@ -1,0 +1,48 @@
+.list-tags
+    margin-bottom 50px
+
+.list-tags__singletag
+    display inline-block
+    margin-right 10px
+    color: white
+    background hightlightColor
+    padding 4px 20px
+    transition background 0.3s
+    border-radius 4px
+
+    &:hover
+        background lighten(hightlightColor, 20%)
+
+.tag-title
+    display: block
+    padding: 10px 70px 10px 70px
+    border-bottom 10px solid lighten(hightlightColor, 80%)
+    color: primaryHeading
+    margin: 40px -70px 0
+    overflow: hidden
+    font-family fjallaFont
+    rem(28px)
+
+.post-list__tags
+    color primaryHeading
+    font-family fjallaFont
+    margin 0 -70px
+    rem(20px)
+    list-style none
+    padding 0
+
+.post-list__link
+    padding 30px 70px
+    color: primaryHeading
+    display flex
+    border-bottom: 1px dotted hightlightColor
+    transition color 0.2s
+
+    &:hover
+        color hightlightColor
+
+    &:last-child
+        border-bottom: none
+
+.post-list__date
+    margin-left: auto

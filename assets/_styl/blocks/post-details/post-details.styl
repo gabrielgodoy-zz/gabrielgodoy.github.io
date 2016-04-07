@@ -7,6 +7,17 @@
     flex-direction column
     @extend $main-gradient
 
+    @media screen and (max-width: 767px)
+        width 100%
+        flex-direction row
+        justify-content space-between
+        align-items center
+        border-top-right-radius 0
+        border-bottom-right-radius 0
+        height: auto
+        padding: 3px 20px
+
+
 .post__category
     font-family fjallaFont
     align-self center
@@ -14,6 +25,10 @@
     line-height 85px
     color categoryColor
     rem(60px)
+    @media screen and (max-width: 767px)
+        rem(32px)
+        line-height: 1.5
+        margin-top 0
 
 .post__date
     color hightlightColor
@@ -21,6 +36,8 @@
     align-self center
     margin-bottom 8px
     rem(16px)
+    @media screen and (max-width: 767px)
+        margin-bottom 0
 
 .post__reading-time
     margin-bottom 4px
