@@ -9,13 +9,19 @@
     align-items flex-end
     flex-direction column
     justify-content center
-    position: absolute
-    height: 100%
-    top: 0
+    position absolute
+    height 100%
+    top 0
 
-    @media screen and (max-width: 767px)
+    @media screen and (max-width 767px)
         border-top-right-radius 0
         border-bottom-right-radius 0
+        display block
+        position relative
+        width 100%
+        margin-top 40px
+        padding 15px
+        min-height auto
 
 .post__tags-title
     color primaryHeading
@@ -23,14 +29,30 @@
     rem(16px)
     margin-bottom 4px
 
+    @media screen and (max-width 767px)
+        display inline-block
+        margin-bottom 0
+        vertical-align middle
+
 .post__tags-list
     display flex
     flex-direction column
     align-items flex-end
     list-style none
 
+    @media screen and (max-width 767px)
+        display inline-block
+        margin-bottom 0
+        vertical-align middle
+        width calc(100% - 60px);
+
 .post__tag-item
     line-height 15px
+
+    @media screen and (max-width 767px)
+        display inline-block
+        margin-right 20px
+        vertical-align middle
 
 .post__tag-link
     color primaryHeading
