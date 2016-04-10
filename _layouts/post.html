@@ -18,6 +18,10 @@ layout: default
                     <img class="post__time-icon" src="../assets/images/post__time.svg" alt="Time to read icon">
                     {{ minutesText }}
                 </span>
+                <span class="single-post__comments">
+                        <img class="post__comments-icon" src="../assets/images/post__comments.svg" alt="Comments icon">
+                        <span class="disqus-comment-count" data-disqus-url="http://gabrielgodoy.com{{ page.url}}"></span>
+                </span>
             </p>
             {% endif %}
         </header>
@@ -46,6 +50,17 @@ layout: default
         {% else %}
         <div class="single-post__content" itemprop="articleBody">
             {{ content }}
+
+            <div class="share-bts__mobile">
+                <a aria-label="Compartilhe no Twitter"  href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}" class="share-bts__icon share-bts__icon--tw" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhe no Twitter">
+                    <img src="../assets/images/icon-tw.svg">
+                </a>
+                <a aria-label="Compartilhe no Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhe no Facebook" class="share-bts__icon share-bts__icon--fb">
+                    <img src="../assets/images/icon-fb.svg">
+                </a>
+            </div>
+
         </div>
         {% endif %}
 

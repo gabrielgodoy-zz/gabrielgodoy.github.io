@@ -15,7 +15,7 @@
         border-top-right-radius 0
         border-bottom-right-radius 0
         height: auto
-        padding: 3px 20px
+        padding: 8px 20px
 
 .post__category
     font-family fjallaFont
@@ -35,12 +35,18 @@
     align-self center
     margin-bottom 8px
     rem(16px)
+
     @media screen and (max-width: 767px)
         margin-bottom 0
         rem(12px)
 
 .post__reading-time
     margin-bottom 4px
+    display block
+    margin 6px 0
+
+    @media screen and (max-width: 767px)
+        margin 0
 
 .post__reading-time,
 .post__comments
@@ -49,12 +55,16 @@
     padding-left 20px
     rem(12px)
 
+    @media screen and (max-width: 767px)
+        padding-left 0
+
 .post__time-icon,
 .post__comments-icon
     margin-right 6px
 
-.post__time-icon
-    width 16px
-
+.post__time-icon,
 .post__comments-icon
     width 16px
+
+    @media screen and (max-width: 767px)
+        width 13px

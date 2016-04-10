@@ -23,6 +23,10 @@
     font-family fjallaFont
     rem(28px)
 
+    @media screen and (max-width: 767px)
+        margin 40px -20px 0
+        padding 10px 20px
+
 .post-list__tags
     color primaryHeading
     font-family fjallaFont
@@ -31,12 +35,18 @@
     list-style none
     padding 0
 
+    @media screen and (max-width: 767px)
+        margin 0 -20px
+
 .post-list__link
     padding 30px 70px
     color: primaryHeading
     display flex
     border-bottom: 1px dotted hightlightColor
     transition color 0.2s
+
+    @media screen and (max-width: 767px)
+        padding 30px 20px
 
     &:hover
         color hightlightColor

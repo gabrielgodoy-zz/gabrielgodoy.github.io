@@ -51,8 +51,16 @@
 .single-post__meta
     margin-bottom 35px
 
-.single-post__time,
 .single-post__reading-time
+    margin-right 25px
+
+    @media screen and (max-width: 540px)
+        display block
+        margin-top 10px
+
+.single-post__time,
+.single-post__reading-time,
+.single-post__comments
     color textColor
 
 .single-post__time
@@ -62,7 +70,8 @@
     display inline-block
     vertical-align middle
 
-.single-post__reading-time
+.single-post__reading-time,
+.single-post__comments
     rem(12px)
     font-family bodyFont
 
@@ -90,6 +99,28 @@
 
     &:hover
         opacity 1
+
+.share-bts__mobile
+    display none
+
+    .share-bts__icon
+        margin-right 30px
+        display: flex
+        align-items: center
+        justify-content: center
+        opacity 1
+        box-shadow none
+
+    .share-bts__icon--fb img
+        width 22px
+
+    .share-bts__icon--tw img
+        width 100%
+
+    @media screen and (max-width: 767px)
+        display: flex
+        align-items: center
+        justify-content: center
 
 .share-bts__icon--tw
     img
