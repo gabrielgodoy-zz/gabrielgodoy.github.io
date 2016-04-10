@@ -8,6 +8,12 @@
     border-bottom-left-radius primaryBorderRadius
     border-bottom-right-radius primaryBorderRadius
 
+    @media screen and (max-width: 767px)
+        margin-left -20px
+        margin-right -20px
+        border-radius 0
+        margin-bottom -25px
+
     &.about-author--page
         background white
         margin 0
@@ -18,11 +24,17 @@
         margin-right 45px
         vertical-align middle
 
+        @media screen and (max-width: 767px)
+            margin-right 0
+
 .about-author__info
     display inline-block
     vertical-align middle
     text-align left
     max-width 480px
+
+    @media screen and (max-width: 767px)
+        text-align center
 
     p
         font-family bodyFont
