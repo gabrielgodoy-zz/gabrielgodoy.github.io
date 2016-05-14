@@ -7,9 +7,9 @@ project_name: Quiz Animal
 project_type: Aplicativo Web
 cover: cover-portifolio-animal.jpg
 image_paths:
-    - images/projects/gnt-animal-1.jpg
-    - images/projects/gnt-animal-2.jpg
-    - images/projects/gnt-animal-3.jpg
+    - gnt-animal-1.jpg
+    - gnt-animal-2.jpg
+    - gnt-animal-3.jpg
 demo: "projects_demos/gnt-animal"
 twitter_text: "Awesome work =)"
 ---
