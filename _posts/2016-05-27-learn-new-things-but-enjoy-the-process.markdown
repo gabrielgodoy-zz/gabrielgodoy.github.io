@@ -24,7 +24,7 @@ Learn the basics in parallel with practicing it, and most important, make mistak
 ## Have an idea for a project
 The process of learning is much more enjoyable when you are actually doing something that you find interesting while learning. So take that awesome project out of the shelf and start executing it now.
 
-The idea for this project doesn't need to be SUPER AWESOME. Remember that you main goal here is to learn in the first place, and not change the world with a revolutionary tool, just not now. Do you like games, so make one, a simple one, it doesn't need to be the next The Sims. Or why don't you try to do a simple calculator or even a to-do list :)? I know, I know, there are more to-do lists in the world than stars in the universe, but the point here is to learn, and besides that, the most gratifying thing is that it will be your todo-list, your creation, you made it.
+The idea for this project doesn't need to be SUPER AWESOME. Remember that you main goal here is to learn in the first place, and not change the world with a revolutionary tool, just not now. Do you like games, so make one, a simple one, it doesn't need to be the next The Sims. Or why don't you try to do a simple calculator or even a to-do list :)? I know, I know, there are more to-do lists in the world than stars in the universe, but the point here is to learn, and besides that, the most gratifying thing is that it will be your to-do list, your creation, you made it.
 
 What you can't do is to make a 'Hello world' and think that you are proficient at something. This is the worst case of an [illusion of competence](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect).
 
