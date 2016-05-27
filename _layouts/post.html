@@ -16,7 +16,7 @@ layout: default
                 {% include minutes-to-read.html pageOrPost=page %}
                 <span class="single-post__reading-time" title="Estimated read time">
                     <img class="post__time-icon" src="../assets/images/post__time.svg" alt="Time to read icon">
-                    {{ minutesText }}
+                    <strong>{{ minutesResult }}</strong>{{ minutesAppend }}
                 </span>
                 <span class="single-post__comments">
                         <img class="post__comments-icon" src="../assets/images/post__comments.svg" alt="Comments icon">
