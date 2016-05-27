@@ -44,4 +44,4 @@ Don't be afraid to show the world your new project or experiment. Don't wait it 
 ## Learn about best practices and refactor old projects
 Learn about best practices and the most efficient ways to program. Then revisit the projects that you created once in a while and look at your code. Try to make your code better, and you will learn a lot on the process. If you have a friend that knows about that language, framework or library that you're are using, ask him to join the project so you can learn more and faster.
 
-I hope you enjoy those tips. Learn something new can be dauting, but it shouldn't be.
+I hope you enjoy those tips. Learning something new can be dauting, but it shouldn't be.
