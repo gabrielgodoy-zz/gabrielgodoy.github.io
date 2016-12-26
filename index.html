@@ -5,53 +5,53 @@ layout: default
 <div class="home">
     <ul class="post-list">
         {% for post in site.posts %}
-        {% unless post.categories contains 'project' %}
-        {% include minutes-to-read.html pageOrPost=post %}
-        <li class="post-list__card post">
-            <div class="post-list__main">
-                <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
-                    <div class="post__content">
-                        <h2 class="post__title">{{ post.title }}</h2>
-                        <p class="post__desc">{{ post.description }}</p>
+            {% unless post.categories contains 'project' %}
+                {% include minutes-to-read.html pageOrPost=post %}
+                <li class="post-list__card post">
+                    <div class="post-list__main">
+                        <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">
+                            <div class="post__content">
+                                <h2 class="post__title">{{ post.title }}</h2>
+                                <p class="post__desc">{{ post.description }}</p>
+                            </div>
+                        </a>
+                        <div class="post__tags">
+                            <p class="post__tags-title">Tags</p>
+                            <ul class="post__tags-list">
+                                {% for tag in post.tags %}
+                                <li class="post__tag-item">
+                                    <a href="/tags/#{{tag | slugify }}" class="post__tag-link">{{ tag }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                </a>
-                <div class="post__tags">
-                    <p class="post__tags-title">Tags</p>
-                    <ul class="post__tags-list">
-                        {% for tag in post.tags %}
-                        <li class="post__tag-item">
-                            <a href="/tags/#{{tag | slugify }}" class="post__tag-link">{{ tag }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <div class="post__details">
-                <a href="{{site.url}}/category/{{post.categories[0]}}" class="post__category">{{ post.categories | first }}</a>
-                <time class="post__date">
-                    {% assign d = post.date | date: "%-d"  %}
-                    {{ post.date | date: "%B" }}
-                    {% case d %}
-                    {% when '1' or '21' or '31' %}{{ d }}st
-                    {% when '2' or '22' %}{{ d }}nd
-                    {% when '3' or '23' %}{{ d }}rd
-                    {% else %}{{ d }}th
-                    {% endcase %},
-                    {{ post.date | date: "%Y" }}
-                </time>
-                <div class="post-more-details">
-                    <span class="post__reading-time" title="Estimated read time">
-                        <img class="post__time-icon" src="assets/images/post__time.svg" alt="Time to read icon">
-                        <strong>{{ minutesResult }}</strong>{{ minutesAppend }}
-                    </span>
-                    <div class="post__comments">
-                        <img class="post__comments-icon" src="assets/images/post__comments.svg" alt="Comments icon">
-                        <span class="disqus-comment-count" data-disqus-url="http://gabrielgodoy.com{{ post.url}}"></span>
+                    <div class="post__details">
+                        <a href="{{site.url}}/category/{{post.categories[0]}}" class="post__category">{{ post.categories | first }}</a>
+                        <time class="post__date">
+                            {% assign d = post.date | date: "%-d"  %}
+                            {{ post.date | date: "%B" }}
+                            {% case d %}
+                            {% when '1' or '21' or '31' %}{{ d }}st
+                            {% when '2' or '22' %}{{ d }}nd
+                            {% when '3' or '23' %}{{ d }}rd
+                            {% else %}{{ d }}th
+                            {% endcase %},
+                            {{ post.date | date: "%Y" }}
+                        </time>
+                        <div class="post-more-details">
+                            <span class="post__reading-time" title="Estimated read time">
+                                <img class="post__time-icon" src="assets/images/post__time.svg" alt="Time to read icon">
+                                <strong>{{ minutesResult }}</strong>{{ minutesAppend }}
+                            </span>
+                            <div class="post__comments">
+                                <img class="post__comments-icon" src="assets/images/post__comments.svg" alt="Comments icon">
+                                <span class="disqus-comment-count" data-disqus-url="http://gabrielgodoy.com{{ post.url}}"></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </li>
-        {% endunless %}
+                </li>
+            {% endunless %}
         {% endfor %}
     </ul>
 </div>

@@ -11,6 +11,13 @@ github_username:  gabrielgodoy
 markdown: kramdown
 permalink: /:title/
 
+kramdown:
+    syntax_highlighter_opts:
+        disable: true
+
+include:
+  - node_modules
+
 # html minify
 compress_html:
   clippings: all
@@ -27,5 +34,10 @@ links:
     url: /projects
   - title: Tags
     url: /tags
+
+gems: [jekyll-mermaid]
+
+mermaid:
+  src: 'https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js'
 
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby', 'gulpfile.js']

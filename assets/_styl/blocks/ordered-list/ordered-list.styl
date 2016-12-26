@@ -1,0 +1,24 @@
+ol
+    counter-reset: counter
+    margin-top: 20px
+    list-style none
+
+.single-post__content
+    ol li
+        &:before
+            display: inline-block
+            background: mainColor
+            width: 25px
+            height: 25px
+            text-align: center
+            line-height: 25px
+            vertical-align: middle
+            margin-right: 8px
+            border-radius 50%
+            content: counter(counter)
+            counter-increment: counter
+            rem(12px)
+            color: white
+            font-family: fjallaFont
+
+

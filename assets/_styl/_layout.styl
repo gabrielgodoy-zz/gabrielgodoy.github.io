@@ -81,7 +81,41 @@ h1
             font-size 18px
 
 .single-post__content
+    h2,
+    h3,
+    h4,
+    h5
+        font-family: fjallaFont
     h2
         font-weight: bold
         color: #1c94c4
-        margin: 50px 0 10px
+        rem(34px)
+        margin: 40px 0 10px
+
+    h3
+        rem(30px)
+        font-weight: bold
+        color: lighten(#1c94c4, 40%)
+        margin: 40px 0 10px
+
+    h4
+        rem(28px)
+        font-weight: bold
+        color: #1c94c4
+        margin: 20px 0 10px
+
+    h5
+        rem(20px)
+        font-weight: bold
+        color: #1c94c4
+        margin: 20px 0 10px
+
+    @media screen and (max-width: 767px)
+        h2
+            rem(28px)
+        h3
+            rem(24px)
+        h4
+            rem(20px)
+        h5
+            rem(16px)

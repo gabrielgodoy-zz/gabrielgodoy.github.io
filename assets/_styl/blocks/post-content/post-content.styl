@@ -1,3 +1,11 @@
+.post-content:not(.project-post)
+    width: calc(100% - 250px)
+    display: inline-block
+    vertical-align: top
+
+    @media screen and (max-width: 1025px)
+        width: 100%
+
 .single-post
     background white
     float left
@@ -13,16 +21,16 @@
         padding 25px 20px
         margin-left -20px
         margin-right -20px
-        width auto
+        width: calc(100% + 40px)
         border-radius 0
 
 .single-post__content
     margin-bottom 75px
-    color textColor
+    color lighterTextColor
 
     p
-        margin-bottom 20px
-        line-height 35px
+        margin 10px 0
+        line-height 2
 
     a
         color primaryHeading
@@ -41,12 +49,14 @@
     display block
     margin 0 auto 40px
 
-
 .single-post__title,
 .single-page__header
     font-family headingFont
-    rem(36px)
+    rem(42px)
     color primaryHeading
+
+    @media screen and (max-width: 767px)
+        rem(38px)
 
 .single-post__meta
     margin-bottom 35px
@@ -75,11 +85,36 @@
     rem(12px)
     font-family bodyFont
 
+.single-post__content blockquote
+    background: almostWhite
+    padding: 30px 100px;
+    width: calc(100% + 200px)
+    margin-left: -100px
+    margin-top: 30px
+    margin-bottom: 30px
+
+    p
+        font-style: normal
+        rem(26px)
+
+    @media screen and (max-width: 767px)
+        width: calc(100% + 40px)
+        margin-left: -20px
+        padding: 20px 20px
+
+        p
+            rem(18px)
+
 .share-bts
     float: left
     position: absolute
-    top: 85px
-    left: 33px
+    margin-left: -70px
+    margin-top: 50px
+
+    &.fixed-element
+        position: fixed
+        top: 30px
+        margin-top: 0
 
     @media screen and (max-width: 767px)
         display none
@@ -93,7 +128,7 @@
     margin-bottom 9px
     width 38px
     height 38px
-    opacity 0.5
+    opacity 0.2
     transition opacity 0.3s
     border-radius 50%
 

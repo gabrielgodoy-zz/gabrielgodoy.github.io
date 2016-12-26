@@ -30,7 +30,7 @@ Browser Sync
 gulp.task('browser-sync', ['jekyll-build'], () => {
     browserSync({
         server: {
-            baseDir: '_site'
+            baseDir: ['_site', './']
         },
         notify: false
     });
