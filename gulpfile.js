@@ -62,7 +62,7 @@ gulp.task('stylus', () => {
 Javascript
 */
 gulp.task('js', () => {
-    return gulp.src((env.prod) ? ['assets/js/**/*.js', '!assets/js/main.js'] : ['assets/js/**/*.js', '!assets/js/analytics.js', '!assets/js/main.js'])
+    return gulp.src((env.prod) ? ['assets/js/*.js', '!assets/js/main.js'] : ['assets/js/*.js', '!assets/js/analytics.js', '!assets/js/main.js'])
         .on('error', jumpError)
         .pipe(pl.concat('main.js'))
         .pipe(pl.uglify())

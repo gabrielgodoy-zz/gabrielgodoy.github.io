@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
             tocContainerDistance = window.scrollY + tocContainer.getBoundingClientRect().top;
         fixedElementsOnScroll(shareBts, shareBtsTopDistance);
         fixedElementsOnScroll(tocContainer, tocContainerDistance);
+        hljs.initHighlightingOnLoad();
     }
-
-    hljs.initHighlightingOnLoad();
 
     function fixedElementsOnScroll(element, elementTop) {
         var scrollYPos = window.scrollY,
