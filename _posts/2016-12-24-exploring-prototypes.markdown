@@ -78,17 +78,7 @@ myFunction.prototype = {
 ```
 So, a basic structure of properties in a function `someFunction(){}` is as follows:
 
-{% mermaid %}
-    graph TD;
-        A(someFunction) --> B("__proto__" <br/> Native Function.prototype);
-        A --> C(prototype <br/> someFunction.prototype);
-        A --> D("constructor <br/> Native constructor Function&#40;&#41;");
-        C --> F("constructor <br/> someFunction&#40;&#41;");
-        C --> G("__proto__" <br/> Native Object.prototype);
-        B --> E("__proto__" <br/> Native Object.prototype)
-{% endmermaid %}
-
-Dude, how do you make those graphs? Look at [mermaid](https://github.com/knsv/mermaid) and [this jekyll plugin](https://github.com/jasonbellamy/jekyll-mermaid)
+![function prototype map](../assets/images/post-images/function-prototype.png)
 
 See those constructor properties above? More on that below.
 
@@ -419,15 +409,8 @@ var secondHuman = new Human();
 ## Prototype chain in action with prototypal inheritance
 So, in order to see a deeper prototype chain in action, lets do this chain:
 
-{% mermaid %}
-    graph LR;
-        A(Object) --> B(Function);
-        B --> C(Animal);
-        C --> D(Mammal);
-        D --> E(Domestic);
-        E --> F(Dog);
-{% endmermaid %}
-
+`Object` > `Function` > `Animal` > `Mammal` > `Domestic` > `Dog`
+ 
 Pay attention that if I set a method on a function `prototype` with the same name as a method declared earlier on the prototype chain, it will override this method declared earlier.
 
 First, let's do this chain using the `new` keyword
