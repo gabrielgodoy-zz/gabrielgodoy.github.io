@@ -410,7 +410,7 @@ var secondHuman = new Human();
 So, in order to see a deeper prototype chain in action, lets do this chain:
 
 `Object` > `Function` > `Animal` > `Mammal` > `Domestic` > `Dog`
- 
+
 Pay attention that if I set a method on a function `prototype` with the same name as a method declared earlier on the prototype chain, it will override this method declared earlier.
 
 First, let's do this chain using the `new` keyword
