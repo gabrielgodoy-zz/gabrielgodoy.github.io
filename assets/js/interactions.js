@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (postPageButNotProject) {
         var $tocContainer = document.querySelector('#toc-container'),
             contentToMap = [
-                '.single-post__content h1',
-                '.single-post__content h2',
-                '.single-post__content h3',
-                '.single-post__content h4',
-                '.single-post__content h5',
-                '.single-post__content h6'
+                '.single-post h1',
+                '.single-post h2',
+                '.single-post h3',
+                '.single-post h4',
+                '.single-post h5',
+                '.single-post h6'
             ],
             contents = gajus.Contents({
                 articles: document.querySelectorAll(contentToMap.join(', '))

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Exploring Prototypes"
+title: "Prototype and prototypal inheritance"
 description: "Prototypes in Javascript are the most important things specially if you want to understand how their inheritance works. In this post I will look for prototypes closer, and explain some things along the way."
 date: 2016-12-24
 categories:
@@ -13,12 +13,11 @@ hero:
 tags:
     - js
     - front-end
-twitter_text: "Exploring Prototypes"
+twitter_text: "Prototype and prototypal inheritance"
 ---
 
 This post assumes that you have basic knowledge of Javascript.
 
-## Prototypes
 I will cover on this first section two different roles that the property **prototype** can have depending on its context:
 
 1. Prototype as a hidden property in all objects
@@ -28,7 +27,7 @@ As you can note, `[[prototype]]` is a hidden property that all objects have.
 
 But `prototype` is also a visible property inside each object that is of type function. And that visible `prototype` inside each function is another object by itself. This visible `prototype` object that exists in each object of type function initializes only with a `constructor` property. More on that later.
 
-### Prototype as a hidden property in all objects
+## Prototype as a hidden property in all objects
 > `[[prototype]]` is an internal property that all objects in Javascript have.
 
 This property is usually hidden, and is commonly described with double brackets, like `[[prototype]]`. This property exists to be used internally by Javascript.
@@ -38,23 +37,23 @@ The method `Object.getPrototypeOf(yourObject)`, introduced in ECMAScript 5, can 
 ```js
 var myObject = {};
 myObject.prototype // undefined
-Object.getPrototypeOf(myObject) // Native Object() function
+Object.getPrototypeOf(myObject) // Native Object.prototype object
 ```
 Some browsers like Chrome implemented a non-standard property called `__proto__` as a way to get the hidden `[[prototype]]` of an object
 
 ```js
 var myObject = {};
-myObject.__proto__ // Native Object() function
+myObject.__proto__ // Native Object.prototype object
 ```
 
-### Prototype as a visible property only in Functions
+## Prototype as a visible property only in Functions
 Like the other objects, **functions** have a hidden `[[prototype]]` that inherits the prototype object of the native constructor function `Function()` from which all the functions inherits native methods like `call()` and `apply()`. We can see this hidden `[[prototype]]` of a function with `Object.getPrototypeOf(myFunction)`, or in some browsers with `__proto__`
 
 ```js
 function myFunction(){}
 Object.getPrototypeOf(myFunction) // Function.prototype object
 myFunction.__proto__ // Function.prototype object
-myFunction.__proto__.__proto__ // Object.prototype object
+myFunction.__proto__.__proto__ // Native Object.prototype object
 ```
 
 BUT, the object of type **Function** also has a visible/public property called **prototype** too.
@@ -73,7 +72,7 @@ has the initial public `prototype` property of
 ```js
 myFunction.prototype = {
    constructor: myFunction(),
-   __proto__: Object()
+   __proto__: Native Object.prototype object
 }
 ```
 So, a basic structure of properties in a function `someFunction(){}` is as follows:
@@ -82,10 +81,10 @@ So, a basic structure of properties in a function `someFunction(){}` is as follo
 
 See those constructor properties above? More on that below.
 
-### Constructors
+## Constructors
 To go deeper in prototypes, it is essential to know a little more about constructors and what role they have in prototypes.
 
-#### Constructor as a function
+### Constructor as a function
 First, constructors are functions, and every function can be a constructor.
 
 The main purpose of a constructor function is to **create new objects**, and to **define how will be the shape of these newly created objects**, like which properties and methods this new object will have.
@@ -167,7 +166,7 @@ firstHuman.__proto__.__proto__ // Native Object.prototype object
 
 This is what is called **prototype chain**. You can 'climb' on the prototype chain and see in each step of **\_\_proto__** each `prototype` that some object is inheriting.
 
-#### Constructor as a property
+### Constructor as a property
 Constructor is also a property in every single object.
 
 The `constructor` property of an object is a reference to the `constructor` property inside the `prototype` of the constructor function, used to create that object. Confused!? See some code:
@@ -185,7 +184,7 @@ Human.prototype.constructor === firstHuman.constructor // true
 
 > As we said, all objects will hold the `constructor` property in them, that references the `constructor` property inside the `prototype` object of the constructor function that was responsible for creating that particular object instance.
 
-#### Native Constructor functions
+### Native Constructor functions
 There are **native** constructor functions that are built-in on the Javascript language, and they serve to create different types of objects, some of them are:
 
 - Object()
@@ -236,7 +235,7 @@ myFunction.constructor // Native Function() constructor
 myFunction.constructor === Function // true
 ```
 
-##### What's the visible `prototype` of those native constructor functions?
+#### What's the visible `prototype` of those native constructor functions?
 
 The visible `prototype` property of those native constructor functions holds all the native methods for each object type that we know, for example:
 
@@ -255,7 +254,7 @@ The `prototype` property of the native constructor `Number` displays, among othe
     toString: toString() // String method
     valueOf: valueOf() // String method
     Symbol(Symbol.iterator): () // In ES6 Strings are iterable
-    __proto__: Object // Native Object.prototype
+    __proto__: Object // Native Object.prototype object
 }
 ```
 The same happens for the other native constructors and their prototype objects.
@@ -272,7 +271,7 @@ So to really see `Function.prototype`, you can use `console.dir(Function.prototy
 console.dir(Function.prototype) // Function.prototype object
 ```
 
-##### What's the hidden `[[prototype]]` of those native constructor functions?
+#### What's the hidden `[[prototype]]` of those native constructor functions?
 
 It seems that every native Constructor is an instance of Function constructor first, before being an instance of Object, the final constructor. Even Object and Function itself are an instance of Function.
 
@@ -303,7 +302,7 @@ And those native constructors by themselves have `Object` as their final creator
 Array.__proto__.__proto__.constructor // Native Object() constructor
 ```
 
-#### Object() is the master constructor function
+### Object() is the master constructor function
 The Native `Object` is a function `Object()`, and by being a function, the `Object` can be a constructor.
 
 Actually, the `Object()` is the constructor of all the Javascript world that comes after it.
@@ -317,7 +316,7 @@ Object.__proto__ // Function.prototype object
 Object.__proto__.__proto__ // Object.prototype object
 ```
 
-### Extending the Constructor prototype
+## Extending the Constructor prototype
 But there is a problem. What if I wanted to change the `walk()` method and have that change reflected in all objects that I created earlier? Or create a new method and have those new methods working on objects that already exist?
 
 Let's think. I know those humans are inheriting the prototype of Human function, but the `walk()` method is not on the prototype of Human function, it was defined inside the Human function itself.
@@ -634,7 +633,7 @@ var someDog = new Dog('Doggy'); // new Dog instance
 ## Class syntax
 ES6 introduced a new class-like syntax for creating constructor functions. This new syntax can increase the adoption of Javascript by developers coming from other Class-based languages.
 
-With Class syntax all methods defined inside the class Human are actually properties of `Human.prototype`. With that, all objects created by Human class will inherit those methods, and those Human methods can be changed and that will be reflected on all objects that were created.
+As you can see below, all methods defined inside the class `Human` are actually properties of `Human.prototype`. With that, all objects created by Human class will inherit those methods, and those Human methods can be changed and that will be reflected on all objects that were created.
 
 ```js
 class Human {
