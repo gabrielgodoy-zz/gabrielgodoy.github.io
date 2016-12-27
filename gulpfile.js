@@ -78,6 +78,7 @@ gulp.task('watch', () => {
     gulp.watch(['assets/js/**/*.js', '!assets/js/main.js'], ['js', 'jekyll-rebuild']);
     gulp.watch([
         '**/*.md',
+        '**/*.markdown',
         '_posts/**/*.*',
         '**/*.html',
         'index.html',

@@ -7,6 +7,7 @@ categories:
     - JS
 hero:
     imagePath: chains.jpg
+    paint: Uninterrupted chain
     author: Ryohei Hase
     link: http://www.ryoheihase.com/
 tags:
