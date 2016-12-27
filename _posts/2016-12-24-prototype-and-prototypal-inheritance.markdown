@@ -89,7 +89,9 @@ First, constructors are functions, and every function can be a constructor.
 
 The main purpose of a constructor function is to **create new objects**, and to **define how will be the shape of these newly created objects**, like which properties and methods this new object will have.
 
-To create a new object with a constructor it is necessary to call the constructor function with the **new** keyword like `new myConstructor()`
+To create a new object with a constructor it is necessary to call the constructor function with the **new** keyword like `new myConstructor()`.
+
+When a constructor is called with the **new** keyword, the **this** context inside it will be the object that you are creating. And when the constructor finishes running, it will return this **this**, that is your instance ready to be used.
 
 Each object that is created by the constructor function is called an **instance** of that constructor.
 
@@ -391,7 +393,9 @@ var firstHuman = Object.create(Human.prototype, {
 ```
 There are other options that can be set on a configurable property, like `get()`, and `set()` but this is topic for another post.
 
-One of the differences between creating objects with **new** keyword and `Object.create()` is that with `Object.create()` the constructor function doesn't run on the moment of creation of an object, as you see:
+> One of the differences between creating objects with **new** keyword and `Object.create()` is that with `Object.create()` the constructor function doesn't run on the moment of creation of an object.
+
+This can be seen below:
 
 ```js
 var Human = function() {
@@ -404,6 +408,15 @@ var firstHuman = Object.create(Human.prototype);
 var secondHuman = new Human();
 // "Human being created"
 ```
+
+### Object.create() or the **new** keyword
+
+Questions arise about what to use when creating new object instances.
+
+Should I use the `new` keyword, or `Object.create()`?
+
+
+
 
 ## Prototype chain in action with prototypal inheritance
 So, in order to see a deeper prototype chain in action, lets do this chain:
@@ -519,6 +532,9 @@ Dog.prototype.sound = function(){
 }
 
 var someDog = new Dog('Doggy'); // new Dog instance
+
+// Calling an Animal method on the Dog instance
+someDog.breath() // Doggy is breathing
 ```
 
 Now let's do prototype inheritance using `Object.create()`
@@ -628,6 +644,9 @@ Dog.prototype.sound = function(){
 }
 
 var someDog = new Dog('Doggy'); // new Dog instance
+
+// Calling an Animal method on the Dog instance
+someDog.breath() // Doggy is breathing
 ```
 
 ## Class syntax
