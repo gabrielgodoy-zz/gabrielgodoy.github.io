@@ -17,7 +17,6 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> jekyll build'
 };
 
-
 /* =============================================================
  Browser Sync
  */
@@ -63,10 +62,12 @@ gulp.task('stylus', () => {
  Javascript
  */
 gulp.task('js', () => {
-    return gulp.src((env.prod) ? ['assets/js/*.js', '!assets/js/main.js'] : ['assets/js/*.js', '!assets/js/analytics.js', '!assets/js/main.js'])
+    return gulp.src(env.prod ? ['assets/js/*.js', '!assets/js/main.js'] : ['!assets/js/analytics.js', 'assets/js/*.js', '!assets/js/analytics.js', '!assets/js/main.js'])
         .on('error', jumpError)
+        .pipe(pl.sourcemaps.init())
         .pipe(pl.concat('main.js'))
         .pipe(pl.uglify())
+        .pipe(pl.sourcemaps.write('.'))
         .pipe(gulp.dest('assets/js/'));
 });
 
@@ -92,11 +93,12 @@ gulp.task('watch', () => {
 /* =============================================================
  Build the Jekyll Site
  */
-gulp.task('jekyll-build', (done) => {
+gulp.task('jekyll-build', ['js'], (done) => {
     browserSync.notify(messages.jekyllBuild);
     return childProcess.spawn('jekyll', ['build', '--drafts'], {
         stdio: 'inherit'
     }).on('close', done);
 });
 
-gulp.task('default', ['stylus', 'js', 'browser-sync', 'watch']);
+gulp.task('default', ['stylus', 'js', 'browser-sync', 'watch', 'jekyll-build']);
+gulp.task('production', ['stylus', 'js', 'jekyll-build']);

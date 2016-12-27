@@ -72,7 +72,7 @@ has the initial public `prototype` property of
 ```js
 myFunction.prototype = {
    constructor: myFunction(),
-   __proto__: Native Object.prototype object
+   __proto__: // Native Object.prototype object
 }
 ```
 So, a basic structure of properties in a function `someFunction(){}` is as follows:
@@ -154,7 +154,7 @@ As a matter of proof, below we can see that the hidden `[[prototype]]` property 
 
 ```js
 var myObject = {};
-myObject.__proto__ // Native Object() function
+myObject.__proto__ // Native Object.prototype object
 myObject.__proto__ === Object.prototype // true
 ```
 
@@ -174,10 +174,10 @@ The `constructor` property of an object is a reference to the `constructor` prop
 ```js
 // The Constructor function
 function Human() {};
-Human.prototype.constructor // function Human() {};
+Human.prototype.constructor // function Human(){};
 
 var firstHuman = new Human();
-firstHuman.constructor // function Human() {};
+firstHuman.constructor // function Human(){};
 
 Human.prototype.constructor === firstHuman.constructor // true
 ```
