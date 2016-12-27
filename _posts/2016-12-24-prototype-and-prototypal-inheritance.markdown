@@ -393,7 +393,7 @@ var firstHuman = Object.create(Human.prototype, {
 ```
 There are other options that can be set on a configurable property, like `get()`, and `set()` but this is topic for another post.
 
-> One of the differences between creating objects with **new** keyword and `Object.create()` is that with `Object.create()` the constructor function doesn't run on the moment of creation of an object.
+> One of the differences between creating objects with **new** keyword and `Object.create()` is that with `Object.create()` the constructor function doesn't run when you are creating an object.
 
 This can be seen below:
 
@@ -409,14 +409,107 @@ var secondHuman = new Human();
 // "Human being created"
 ```
 
-### Object.create() or the **new** keyword
+The real fact is that you don't even need a function at all to use Object.create() for creating objects, unlike `new someFunction()`
 
-Questions arise about what to use when creating new object instances.
+```js
+var iAmJustAnObject = {
+    name: this.name,
+    walk: function(){}
+}
 
-Should I use the `new` keyword, or `Object.create()`?
+var myInstance = Object.create(iAmJustAnObject);
+```
+What we are doing above is setting the hidden [[prototype]] of `myInstance` to be the object `iAmJustAnObject`. So `myInstance` is inheriting the properties of the object `iAmJustAnObject`.
 
+> As you see, the first argument in `Object.create()` can be any regular object, and not necessarily a prototype property of a constructor function.
 
+### Object.create() or the **new** keyword?
 
+Questions arise about what to use, the `new` keyword, or `Object.create()`?
+
+`Object.create()` do not run the constructor function, and that can be good if you want just to setup a prototype chain.
+
+Let me compare both ways of making a simple prototype chain.
+
+First with the `new` keyword:
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+function Student(name) {
+    Person.call(this, name);
+}
+
+/*
+I had to create a Person() instance to be the prototype of Student
+But Person expects a "name" argument when creating an instance,
+and here I am calling Person() without arguments because
+I don't want to create instances right now,
+I just want the prototype chain between Person and Student
+*/
+Student.prototype = new Person();
+Student.prototype // Person {name: undefined}
+```
+
+On the example above, I just wanted `Student` to inherit the prototype from `Person`, but I had to create an instance of Person to be the prototype of Student.
+
+The problem is that I had to run the `Person(name)` constructor, and Person was expecting an argument `name` which I didn't pass because I just wanted the prototype chain.
+
+There are a few solutions for the problem presented above, but that demands you to write more code.
+
+Now `Object.create()`:
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+function Student(name) {
+    Person.call(this, name);
+}
+
+/*
+Student.prototype becomes a new object with Person.prototype as the base
+
+You set the prototype chain without the need to create a Person instance
+as the prototype of Student
+*/
+Student.prototype = Object.create(Person.prototype);
+Student.prototype // Person {}
+```
+
+As you see, with `Object.create()` my intentions are clearer, and I don't need to run `Person` constructor to setup a prototype chain between Person and Student:
+
+> My gut tells me that I should use Object.create() to setup a prototype chain in a cleaner way. And yes, I can use the new keyword to create object instances from constructor functions
+
+So an example would be like that:
+
+```js
+function Person(name) {
+	this.name = name;
+}
+
+function Student(name) {
+	Person.call(this, name);
+}
+
+// Setting up the prototype chain with Object.create()
+Student.prototype = Object.create(Person.prototype);
+
+/*
+When we set Student.prototype to be Person.prototype we
+loose Student.prototype.constructor reference for Student instances
+So we set Student.prototype.constructor reference
+back to Student constructor function
+*/
+Student.prototype.constructor = Student;
+
+// Creating a Student instance with the new keyword
+var firstStudent = new Student('John');
+firstStudent.name = 'John';
+```
 
 ## Prototype chain in action with prototypal inheritance
 So, in order to see a deeper prototype chain in action, lets do this chain:
@@ -424,120 +517,6 @@ So, in order to see a deeper prototype chain in action, lets do this chain:
 `Object` > `Function` > `Animal` > `Mammal` > `Domestic` > `Dog`
 
 Pay attention that if I set a method on a function `prototype` with the same name as a method declared earlier on the prototype chain, it will override this method declared earlier.
-
-First, let's do this chain using the `new` keyword
-
-```js
-/***** ANIMAL CONSTRUCTOR *****/
-function Animal(name) {
-  this.name = name;
-};
-Animal.prototype.breath = function() {
-    console.log(this.name + " is breathing")
-};
-Animal.prototype.move = function() {
-    console.log(this.name + " is moving");
-};
-
-
-
-/***** MAMMAL CONSTRUCTOR *****/
-function Mammal(name) {
-    /*
-    Calling Animal constructor function, with the new Animal instance
-    being created as the value of 'this', and a parameter called name,
-    that I am defining when creating the Dog instance with 'new'
-    */
-    Animal.call(this, name);
-};
-
-/*
-Setting Mammal.prototype to an instance of Animal
-Animal.prototype object can now be inherited by the Mammal Constructor
-*/
-Mammal.prototype = new Animal();
-
-/*
-When we set the whole Mammal.prototype to be Animal.prototype we
-loose Mammal.prototype.constructor reference for Mammal instances
-So we set Mammal.prototype.constructor reference back to Mammal()
-*/
-Mammal.prototype.constructor = Mammal;
-
-Mammal.prototype.produceMilk = function(){
-    console.log('milking');
-}
-
-
-
-/***** DOMESTIC CONSTRUCTOR *****/
-function Domestic(name) {
-    /*
-    Calling Mammal constructor function, with the new Mammal instance
-    being created as the value of 'this', and a parameter called name,
-    that I am defining when creating the Dog instance with 'new'
-    */
-    Mammal.call(this, name);
-};
-
-/*
-Setting Domestic.prototype to an instance of Mammal
-Mammal.prototype object can now be inherited by the Domestic Constructor
-*/
-Domestic.prototype = new Mammal();
-
-/*
-When we set the whole Domestic.prototype to be Mammal.prototype we
-loose Domestic.prototype.constructor reference for Domestic instances
-So we set Domestic.prototype.constructor reference back to Domestic()
-*/
-Domestic.prototype.constructor = Domestic;
-
-Domestic.prototype.followRules = function(){
-    console.log('Obeying');
-}
-// Overriding Animal move method
-Domestic.prototype.move = function(){
-    console.log('Moving like a domestic animal');
-}
-
-
-
-/***** DOG CONSTRUCTOR *****/
-function Dog(name) {
-    /*
-    Calling Domestic constructor function, with the new Dog instance
-    being created as the value of 'this', and a parameter called name,
-    that I am defining when creating the Dog instance with 'new'
-    */
-    Domestic.call(this, name);
-};
-
-/*
-Setting Dog.prototype to an instance of Domestic
-Domestic.prototype object can now be inherited by the Dog Constructor
-*/
-Dog.prototype = new Domestic();
-
-/*
-When we set the whole Dog.prototype to be Domestic.prototype we
-loose Dog.prototype.constructor reference for Dog instances
-So we set Dog.prototype.constructor reference back to Dog()
-*/
-Dog.prototype.constructor = Dog;
-
-// Extending Dog.prototype with its own method
-Dog.prototype.sound = function(){
-    console.log('Woof Woof');
-}
-
-var someDog = new Dog('Doggy'); // new Dog instance
-
-// Calling an Animal method on the Dog instance
-someDog.breath() // Doggy is breathing
-```
-
-Now let's do prototype inheritance using `Object.create()`
 
 ```js
 /***** ANIMAL CONSTRUCTOR *****/
