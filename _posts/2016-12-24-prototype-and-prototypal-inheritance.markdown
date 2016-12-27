@@ -427,7 +427,7 @@ What we are doing above is setting the hidden [[prototype]] of `myInstance` to b
 
 Questions arise about what to use, the `new` keyword, or `Object.create()`?
 
-`Object.create()` do not run the constructor function, and that can be good if you want just to setup a prototype chain.
+`Object.create()` do not run the constructor function, it simply sets an object to be the prototype of that object that you are creating. And that can be good if you want just to setup a prototype chain.
 
 Let me compare both ways of making a simple prototype chain.
 
