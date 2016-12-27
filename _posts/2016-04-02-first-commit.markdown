@@ -20,6 +20,7 @@ I work at Huge Rio now, a huge agency as the name says 😓 . There I have the o
 
 It has been a pleasure to work side by side with such talented guys, like [@caiovaccaro](https://twitter.com/caiovaccaro){:target="_blank"}, [@Willian_justen](http://willianjusten.com.br/){:target="_blank"}, [@nipher_jonas](http://nipher.io/){:target="_blank"}, [@nandoacoelho](http://twitter.com/nandoacoelho){:target="_blank"} and [Márcio Ribeiro](http://shiz.co/){:target="_blank"}. I am learning a lot about how to make things right...so...why not talk a little about it.
 
+## Why a blog?
 My main goal with this blog is to share my experiences as a front-end developer, and to talk about the new exciting stuff that I come up with everyday as well, such as new tools, frameworks and almost everything about the front-end world.
 
 I also expect to learn from people who may stumble upon this blog with good insights, so we can share some knowledge.

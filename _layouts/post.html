@@ -90,7 +90,7 @@ layout: default
         {% endif %}
 
         {% unless page.categories contains 'project' %}
-        {% include about-author.html %}
+            {% include about-author.html %}
         {% endunless %}
 
     </div>
@@ -123,10 +123,10 @@ layout: default
 
 </article>
 
-{% if page.hasTableOfContent %}
+{% unless page.categories contains 'project' %}
     <aside class="post-sidebar">
         <div id="toc-container">
             <span class="toc-title">Table of Contents</span>
         </div>
     </aside>
-{% endif %}
+{% endunless %}

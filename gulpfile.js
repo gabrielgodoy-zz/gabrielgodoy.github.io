@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     rupture = require("rupture"),
     browserSync = require('browser-sync'),
     pl = require('gulp-load-plugins')(),
-    cp = require('child_process'),
+    childProcess = require('child_process'),
     env = require('minimist')(process.argv.slice(2));
 
 function jumpError(error) {
@@ -17,16 +17,10 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> jekyll build'
 };
 
-/* =============================================================
-Rebuild Jekyll & do page reload
-*/
-gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
-    browserSync.reload();
-});
 
 /* =============================================================
-Browser Sync
-*/
+ Browser Sync
+ */
 gulp.task('browser-sync', ['jekyll-build'], () => {
     browserSync({
         server: {
@@ -37,8 +31,15 @@ gulp.task('browser-sync', ['jekyll-build'], () => {
 });
 
 /* =============================================================
-Style
-*/
+ Rebuild Jekyll & do page reload
+ */
+gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
+    browserSync.reload();
+});
+
+/* =============================================================
+ Style
+ */
 gulp.task('stylus', () => {
     return gulp.src('./assets/_styl/main.styl')
         .on('error', jumpError)
@@ -59,8 +60,8 @@ gulp.task('stylus', () => {
 });
 
 /* =============================================================
-Javascript
-*/
+ Javascript
+ */
 gulp.task('js', () => {
     return gulp.src((env.prod) ? ['assets/js/*.js', '!assets/js/main.js'] : ['assets/js/*.js', '!assets/js/analytics.js', '!assets/js/main.js'])
         .on('error', jumpError)
@@ -70,8 +71,8 @@ gulp.task('js', () => {
 });
 
 /* =============================================================
-Watcher
-*/
+ Watcher
+ */
 gulp.task('watch', () => {
     gulp.watch('assets/_styl/**/*.styl', ['stylus', 'jekyll-rebuild']);
     gulp.watch(['assets/js/**/*.js', '!assets/js/main.js'], ['js', 'jekyll-rebuild']);
@@ -88,14 +89,13 @@ gulp.task('watch', () => {
 });
 
 /* =============================================================
-Build the Jekyll Site
-*/
+ Build the Jekyll Site
+ */
 gulp.task('jekyll-build', (done) => {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build'], {
-            stdio: 'inherit'
-        })
-        .on('close', done);
+    return childProcess.spawn('jekyll', ['build', '--drafts'], {
+        stdio: 'inherit'
+    }).on('close', done);
 });
 
 gulp.task('default', ['stylus', 'js', 'browser-sync', 'watch']);

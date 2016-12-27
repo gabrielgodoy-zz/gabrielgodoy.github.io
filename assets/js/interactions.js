@@ -1,14 +1,22 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (document.querySelector('.share-bts')) {
+    var postPageButNotProject = document.querySelector('.share-bts') && !document.querySelector('.project-post');
+
+    if (postPageButNotProject) {
         var shareBts = document.querySelector('.share-bts'),
             shareBtsTopDistance = window.scrollY + shareBts.getBoundingClientRect().top,
             tocContainer = document.querySelector('#toc-container'),
             tocContainerDistance = window.scrollY + tocContainer.getBoundingClientRect().top;
+
         fixedElementsOnScroll(shareBts, shareBtsTopDistance);
         fixedElementsOnScroll(tocContainer, tocContainerDistance);
         hljs.initHighlightingOnLoad();
+
+        window.addEventListener('scroll', function() {
+            fixedElementsOnScroll(shareBts, shareBtsTopDistance);
+            fixedElementsOnScroll(tocContainer, tocContainerDistance);
+        });
     }
 
     function fixedElementsOnScroll(element, elementTop) {
@@ -28,14 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    if (document.getElementsByClassName('single-post')[0]) {
-        window.addEventListener('scroll', function() {
-            fixedElementsOnScroll(shareBts, shareBtsTopDistance);
-            fixedElementsOnScroll(tocContainer, tocContainerDistance);
-        });
-    }
-
-    if (document.querySelector('.share-bts')) {
+    if (postPageButNotProject) {
         var $tocContainer = document.querySelector('#toc-container'),
             contentToMap = [
                 '.single-post__content h1',

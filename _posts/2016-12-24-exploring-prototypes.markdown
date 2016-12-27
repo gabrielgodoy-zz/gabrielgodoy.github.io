@@ -12,7 +12,6 @@ hero:
 tags:
     - js
     - front-end
-hasTableOfContent: true
 twitter_text: "Exploring Prototypes"
 ---
 
