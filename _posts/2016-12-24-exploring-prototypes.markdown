@@ -145,7 +145,7 @@ firstHuman.__proto__ === Human.prototype // true
 As you can see on the prototype chain, the first `prototype` object inherited by `firstHuman` is the `Human.prototype`, so the human instances created by the Human constructor function are inheriting the `prototype` of Human
 
 
-> The hidden `[[prototype]]` property of an object is a reference to the visible `prototype` object of the constructor function that created that object. This is the hidden link between the object and the constructor function that created that object. <br><br> And this patterns repeats itself on every object, until it reaches the native built-in Object, the creator of all the other objects. This is how the prototype chain works*
+> The hidden `[[prototype]]` property of an object is a reference to the visible `prototype` object of the constructor function that created that object. This is the hidden link between the object and the constructor function that created that object. <br><br> And this pattern repeats itself on every object, until it reaches the native built-in Object, the creator of all the other objects. This is how the prototype chain works*
 
 <sub>
 \* If you do not understand the sentence above very well, continue reading the post, come back here later and re-read it. It will make more sense.
@@ -183,7 +183,7 @@ firstHuman.constructor // function Human() {};
 Human.prototype.constructor === firstHuman.constructor // true
 ```
 
-> As we said, all objects will hold the `constructor` **property** in them, that references the constructor property inside the visible `prototype` object of the constructor function that was responsible for creating that particular object instance.
+> As we said, all objects will hold the `constructor` property in them, that references the `constructor` property inside the `prototype` object of the constructor function that was responsible for creating that particular object instance.
 
 #### Native Constructor functions
 There are **native** constructor functions that are built-in on the Javascript language, and they serve to create different types of objects, some of them are:
