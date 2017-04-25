@@ -35,7 +35,7 @@ links:
   - title: Tags
     url: /tags
 
-gems: [jekyll-mermaid]
+gems: []
 
 mermaid:
   src: 'https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js'

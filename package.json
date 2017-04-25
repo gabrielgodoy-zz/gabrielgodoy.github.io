@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "gulp",
+    "jekyll": "jekyll serve",
     "build": "gulp production --prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepush": "npm run build"
@@ -38,6 +40,7 @@
   "dependencies": {
     "contents": "4.0.2",
     "highlight.js": "9.9.0",
-    "jeet": "6.1.2"
+    "jeet": "6.1.2",
+    "jekyll": "^3.0.0-beta1"
   }
 }
